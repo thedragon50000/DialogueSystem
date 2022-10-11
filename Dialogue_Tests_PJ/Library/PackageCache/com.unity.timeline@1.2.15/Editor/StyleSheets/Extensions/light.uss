@@ -277,6 +277,6 @@
     color: rgb(0, 0, 0);
 }
 
-.sequenceSwitcher {
+.sequenceSwitcher{
     background-color: rgb(208, 208, 208);
 }

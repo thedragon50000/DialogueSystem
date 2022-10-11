@@ -105,9 +105,10 @@ namespace Doublsb.Dialog
         //================================================
         private void _delete_ArrayElement(SerializedProperty array, int index, bool isObject = false)
         {
-            //objectReferenceValue才會有圖片名稱 20221007 HowWang
+            //objectReferenceValue才會有圖片名稱 bugfixed 20221007 HowWang
             if (isObject &&
-                array.GetArrayElementAtIndex(index).objectReferenceValue != null) //若圖片陣列內有東西    todo: BUG,不管有沒有圖片都會跑到這
+                // array.GetArrayElementAtIndex(index) != null  //這個不行，永遠不會是null
+                array.GetArrayElementAtIndex(index).objectReferenceValue != null) //若圖片陣列內有東西
             {
                 Debug.Log("圖片非空");
 

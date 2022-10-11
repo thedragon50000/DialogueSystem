@@ -49,6 +49,7 @@ namespace Doublsb.Dialog
         public string[] ArrayEmotion = new string[] { "Normal" };
         // public Sprite[] _sprite ;
         public Sprite[] ArraySprite = new Sprite[1];    //20221007 HowWang
+        public Sprite[] ArraySprite2 = new Sprite[1];    //20221007 HowWang
 
         //================================================
         //Private Method

@@ -122,6 +122,7 @@ namespace Doublsb.Dialog
             }
         }
 
+        //todo : 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
         public void Play_CallSE(string SEname)
         {
             if (_current_Character != null)

@@ -1,17 +1,17 @@
 #HistoryContainer {
-    background-color: #292929;
+  background-color: #292929;
 }
 
 .obtainedRevision #HistoryDetail {
-    background-color: #333;
+  background-color: #333;
 }
 
 .absentRevision #HistoryDetail {
-    background-color: #595959;
+  background-color: #595959;
 }
 
 #StatusView {
-    background-color: #292929;
+  background-color: #292929;
 }
 
 #StatusView > #StatusMessage {
@@ -49,35 +49,35 @@ BuildStatusButton.unity-button:focus:checked {
 }
 
 CollabHistoryDropDown {
-    border-color: #292929;
+  border-color: #292929;
 }
 
 CollabHistoryDropDownItem {
-    border-color: #292929;
+  border-color: #292929;
 }
 
 #RevisionLine.obtainedDateLine {
-    background-color: #0cb4cc;
+  background-color: #0cb4cc;
 }
 
 .obtainedRevision #RevisionLine {
-    background-color: #0cb4cc;
+  background-color: #0cb4cc;
 }
 
 #RevisionIndex {
-    color: #0cb4cc;
+  color: #0cb4cc;
 }
 
 #RevisionIndicator {
-    border-color: #0cb4cc;
+  border-color: #0cb4cc;
 }
 
 .currentRevision #RevisionIndicator {
-    background-color: #0cb4cc;
+  background-color: #0cb4cc;
 }
 
 .currentRevision #HistoryDetail {
-    border-color: #0cb4cc;
+  border-color: #0cb4cc;
 }
 
 #StatusView > #StatusButton {
