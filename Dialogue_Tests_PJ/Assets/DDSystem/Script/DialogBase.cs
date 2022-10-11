@@ -22,13 +22,13 @@ namespace Doublsb.Dialog
     /// <summary>
     /// 指令
     /// </summary>
-    public enum E_Command
+    public enum E_Command   //todo:轉字串的方法
     {
         print,
         color,
         emote,
         size,
-        sound,  //todo: 與AudioManager合併
+        sound,
         speed,
         click,
         close,
@@ -69,6 +69,8 @@ namespace Doublsb.Dialog
 
     /// <summary>
     /// Convert string to Data. Contains List of DialogCommand and DialogFormat.
+    /// 一個DialogData，是一組完整的角色立繪 + 對白 + 是否可以快轉對話的 bool
+    /// UnityAction是一種Delegate,會在對話一開始時觸發(如果有加的話)
     /// </summary>
     public class DialogData
     {

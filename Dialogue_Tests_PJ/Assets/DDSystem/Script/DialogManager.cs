@@ -11,30 +11,23 @@ namespace Doublsb.Dialog
         //================================================
         //Public Variable
         //================================================
-        [Header("Game Objects")]
-        public GameObject Printer;
+        [Header("Game Objects")] public GameObject Printer;
         public GameObject Characters;
 
-        [Header("UI Objects")]
-        public Text Printer_Text;
+        [Header("UI Objects")] public Text Printer_Text;
 
-        [Header("Audio Objects")]
-        public AudioSource SEAudio;
-        public AudioSource CallAudio;
+        [Header("Audio Objects")] public AudioSource SEAudio;
+        // public AudioSource CallAudio;    //Audio合併後不需要這個
 
-        [Header("Preference")]
-        public float Delay = 0.1f;
+        [Header("Preference")] public float Delay = 0.1f;
 
-        [Header("Selector")]
-        public GameObject Selector;
+        [Header("Selector")] public GameObject Selector;
         public GameObject SelectorItem;
         public Text SelectorItemText;
 
-        [HideInInspector]
-        public E_State eState;
+        [HideInInspector] public E_State eState;
 
-        [HideInInspector]
-        public string Result;
+        [HideInInspector] public string Result;
 
         //================================================
         //Private Method
@@ -44,19 +37,22 @@ namespace Doublsb.Dialog
 
         private float _currentDelay;
         private float _lastDelay;
+        
         private Coroutine _textingRoutine;
         private Coroutine _printingRoutine;
 
         //================================================
         //Public Method
         //================================================
+
         #region Show & Hide
+
         public void Show(DialogData Data)
         {
             _current_Data = Data;
             _find_character(Data.strCharacter);
 
-            if(_current_Character != null)
+            if (_current_Character != null)
                 _emote("Normal");
 
             _textingRoutine = StartCoroutine(Activate());
@@ -72,19 +68,21 @@ namespace Doublsb.Dialog
             switch (eState)
             {
                 case E_State.Active:
-                    StartCoroutine(_skip()); break;
+                    StartCoroutine(_skip());
+                    break;
 
                 case E_State.Wait:
-                    if(_current_Data.SelectList.Count <= 0) Hide(); break;
+                    if (_current_Data.SelectList.Count <= 0) Hide();
+                    break;
             }
         }
 
         public void Hide()
         {
-            if(_textingRoutine != null)
+            if (_textingRoutine != null)
                 StopCoroutine(_textingRoutine);
 
-            if(_printingRoutine != null)
+            if (_printingRoutine != null)
                 StopCoroutine(_printingRoutine);
 
             Printer.SetActive(false);
@@ -99,6 +97,7 @@ namespace Doublsb.Dialog
                 _current_Data.Callback = null;
             }
         }
+
         #endregion
 
         #region Selector
@@ -122,19 +121,18 @@ namespace Doublsb.Dialog
             }
         }
 
-        //todo : 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
         public void Play_CallSE(string SEname)
         {
             if (_current_Character != null)
             {
+                //todo : 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
                 // var FindSE
                 //     = Array.Find(_current_Character.CallSE, (SE) => SE.name == SEname);
                 //
                 // CallAudio.clip = FindSE;
                 // CallAudio.Play();
-                
-                AudioManager.inst.PlaySFX(SEname);   //todo:Make it work
 
+                AudioManager.inst.PlaySFX(SEname); //todo:Make it work
             }
         }
         // public void Play_CallSE(Enum eVoice)
@@ -205,7 +203,7 @@ namespace Doublsb.Dialog
 
             Characters.SetActive(_current_Character != null);
             foreach (Transform item in Characters.transform) item.gameObject.SetActive(false);
-            if(_current_Character != null) _current_Character.gameObject.SetActive(true);
+            if (_current_Character != null) _current_Character.gameObject.SetActive(true);
         }
 
         private void _init_selector()
@@ -221,7 +219,7 @@ namespace Doublsb.Dialog
                     _add_selectorItem(i);
                 }
             }
-                
+
             else Selector.SetActive(false);
         }
 
@@ -253,7 +251,10 @@ namespace Doublsb.Dialog
                 Show(Data);
                 _init_selector();
 
-                while (eState != E_State.Deactivate) { yield return null; }
+                while (eState != E_State.Deactivate)
+                {
+                    yield return null;
+                }
             }
         }
 
@@ -285,7 +286,6 @@ namespace Doublsb.Dialog
 
                     case E_Command.sound:
                         Play_CallSE(item.Context);
-                        // Play_CallSE(E_PadkoVoice.haha);
                         break;
 
                     case E_Command.speed:
@@ -347,12 +347,5 @@ namespace Doublsb.Dialog
         }
 
         #endregion
-
-    }
-    public enum E_PadkoVoice    //enum example
-    {
-        Shine,
-        abababa,
-        haha
     }
 }

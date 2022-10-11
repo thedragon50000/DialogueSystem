@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Andy\Script\AudioManager.cs" />
+     <Compile Include="Assets\Andy\Script\Data\Commands.cs" />
+     <Compile Include="Assets\Andy\Script\Data\VoicedataManager.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
      <Compile Include="Assets\DDSystem\Demo\Scripts\TestMessage.cs" />
      <Compile Include="Assets\DDSystem\Demo\Scripts\TestMessage_Selection.cs" />
