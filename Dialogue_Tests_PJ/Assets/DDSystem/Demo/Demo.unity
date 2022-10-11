@@ -1024,7 +1024,6 @@ GameObject:
   m_Component:
   - component: {fileID: 352199045}
   - component: {fileID: 352199044}
-  - component: {fileID: 352199043}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1032,14 +1031,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &352199043
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352199042}
-  m_Enabled: 1
 --- !u!20 &352199044
 Camera:
   m_ObjectHideFlags: 0
@@ -1533,6 +1524,159 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112189755}
   m_CullTransparentMesh: 0
+--- !u!1001 &1150264461
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1000011100329290, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012667617292, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Clip.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Name
+      value: haha
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7796b54b22f7f02439fc159ff0ec2b7c, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b5137b2e6aab134a886c0b4019d98ae, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a02d9dad0fed49f499c5daf0b11b1390, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Clip.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 966345c10ff988242acceac7edc8cb63, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Clip.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 46f3d3d35c1664448aa4ff425ab3add6, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].ResetTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Volume.Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Volume.IsRandom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Volume.Max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Volume.Min
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Pitch.Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Pitch.IsRandom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Pitch.Max
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].Pitch.Min
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[2].MixerGroup
+      value: 
+      objectReference: {fileID: 24319504, guid: 1e7de879870601a4eb74ee858a6feccd,
+        type: 2}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: BGMSetting.Array.data[1].Name
+      value: Game_DT
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
 --- !u!1 &1202981991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,6 +2073,12 @@ PrefabInstance:
       propertyPath: ChatSE.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: d892de2cb9eb07941bef7f5f4245c1b3, type: 3}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 055c44a6ee790d743bcf692c99bfef6c,
+        type: 3}
     - target: {fileID: 8206358605457009709, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
       propertyPath: m_Name
@@ -2061,17 +2211,27 @@ PrefabInstance:
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
       propertyPath: Emotion._emotion.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
       propertyPath: Emotion._sprite.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
       propertyPath: CallSE.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArrayEmotion.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
@@ -2111,6 +2271,34 @@ PrefabInstance:
       propertyPath: CallSE.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 7796b54b22f7f02439fc159ff0ec2b7c, type: 3}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34f96a43c2ac0804b95b2e3ab9751332,
+        type: 3}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArrayEmotion.Array.data[1]
+      value: Happy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 77fa19401d8472a498f2164bce0d7a4b,
+        type: 3}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f01fa9aca81c9142a73bb0c759a88de,
+        type: 3}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArrayEmotion.Array.data[2]
+      value: Sad
+      objectReference: {fileID: 0}
     - target: {fileID: 8206358605457009709, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
       propertyPath: m_Name

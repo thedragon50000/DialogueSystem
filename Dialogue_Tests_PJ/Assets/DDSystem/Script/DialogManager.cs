@@ -127,13 +127,29 @@ namespace Doublsb.Dialog
         {
             if (_current_Character != null)
             {
-                var FindSE
-                    = Array.Find(_current_Character.CallSE, (SE) => SE.name == SEname);
+                // var FindSE
+                //     = Array.Find(_current_Character.CallSE, (SE) => SE.name == SEname);
+                //
+                // CallAudio.clip = FindSE;
+                // CallAudio.Play();
+                
+                AudioManager.inst.PlaySFX(SEname);   //todo:Make it work
 
-                CallAudio.clip = FindSE;
-                CallAudio.Play();
             }
         }
+        // public void Play_CallSE(Enum eVoice)
+        // {
+        //     if (_current_Character != null)
+        //     {
+        //         var FindSE
+        //             = Array.Find(_current_Character.CallSE, (SE) => SE.name == eVoice.ToString());
+        //
+        //         CallAudio.clip = FindSE;
+        //         CallAudio.Play();
+        //
+        //         AudioManager.inst.PlaySFX(E_PadkoVoice.haha.ToString());   //todo:Make it work
+        //     }
+        // }
 
         #endregion
 
@@ -269,6 +285,7 @@ namespace Doublsb.Dialog
 
                     case E_Command.sound:
                         Play_CallSE(item.Context);
+                        // Play_CallSE(E_PadkoVoice.haha);
                         break;
 
                     case E_Command.speed:
@@ -331,5 +348,11 @@ namespace Doublsb.Dialog
 
         #endregion
 
+    }
+    public enum E_PadkoVoice    //enum example
+    {
+        Shine,
+        abababa,
+        haha
     }
 }
