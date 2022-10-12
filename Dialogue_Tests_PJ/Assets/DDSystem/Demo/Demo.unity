@@ -636,6 +636,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4094011683009168357, guid: d536fa71dd00cf349a228e41212ace48,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 3c88fa1f262d76449b05b6bc57bf0235,
+        type: 3}
     - target: {fileID: 4094011683184476936, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
       propertyPath: m_Name
@@ -1598,7 +1604,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SFXSetting.Array.data[2].Clip.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 7796b54b22f7f02439fc159ff0ec2b7c, type: 3}
+      objectReference: {fileID: 8300000, guid: b34cb3767dfe8354897d9d65af16b523, type: 3}
     - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
         type: 3}
       propertyPath: SFXSetting.Array.data[2].Clip.Array.data[1]

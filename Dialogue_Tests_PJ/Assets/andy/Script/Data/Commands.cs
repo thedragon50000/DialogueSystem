@@ -13,45 +13,96 @@ namespace Doublsb.Dialog
         public string ChangeColor(E_TextColor _color)
         {
             string temp = "";
-            string sColor = _color.ToString(); 
-            temp = string.Format("/color:{0}/",sColor);
+            string sColor = _color.ToString();
+            temp = $"/color:{sColor}/";
             return temp;
         }
 
-        public string ChangeSize()
+        public string ChangeSize(E_Up_Down_Init upDownInit)
         {
             string temp = "";
+            string sSize = upDownInit.ToString();
+            temp = $"/size:{sSize}/";
+            return temp;
+        }
+
+        /// <summary>
+        /// 要先把表情整理成enum
+        /// </summary>
+        /// <param name="emotion"></param>
+        /// <returns></returns>
+        public string ChangeEmotion(string emotion)
+        {
+            string temp = "";
+            temp = $"/emote:{emotion}/";
+            return temp;
+        }
+
+        public string WaitingClick()
+        {
+            string temp = "/click/";
+
+            return temp;
+        }
+
+        public string Wait_for_Seconds(float second)
+        {
+            string temp = "";
+            temp = $"/wait:{second}/";
+
+            return temp;
+        }
+
+        public string ChangeSpeed(E_Up_Down_Init eUpDownInit)
+        {
+            string temp = "";
+            string sSpeed = eUpDownInit.ToString();
+            temp = $"/wait:{sSpeed}/";
+
+            return temp;
+        }
+
+        public string ChangeSpeed(float speed)
+        {
+            string temp = "";
+            temp = $"/wait:{speed}/";
+
+            return temp;
+        }
+
+        public string Close()
+        {
+            string temp = "";
+            temp = "/close/";
+
+            return temp;
+        }
+
+        /// <summary>
+        /// 先把音效整理成enum
+        /// </summary>
+        /// <param name="sound"></param>
+        /// <returns></returns>
+        public string PlaySound(string sound)
+        {
+            string temp = "";
+            temp = $"/sound:{sound}/";
+
             return temp;
         }
     }
 
     /*
-     /color:red/
-
-/size:up/
-
-/size:init/
-
-/size:down/
-
      /emote:Happy/
      
-     /click/
-
-/wait:0.1/
-
-/speed:down/
-
-/speed:up/
-
-/speed:init/
-
-/speed:0.2/
-
-/close/
-
 bool isSkipable = false
 
-/sound:haha/
      */
+}
+
+public enum E_Up_Down_Init
+{
+    up,
+    down,
+    init
 }
