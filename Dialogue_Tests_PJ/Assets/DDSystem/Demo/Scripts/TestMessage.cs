@@ -21,12 +21,20 @@ public class TestMessage : MonoBehaviour
             "預設字體大小", "Li"));
 
         dialogTexts.Add(new DialogData(
-            "I am Sa. Popped out to let you know Asset can show other characters.", "Sa"));
+            "換圖片", "Sa"));
 
         dialogTexts.Add(new DialogData("This Asset, The D'Dialog System has many features.", "Li"));
 
         dialogTexts.Add(new DialogData(
-            "You can easily change text /color:red/color, /color:white/and /size:up//size:up/size/size:init/ like this.",
+            "You can easily change text " +
+            cmdManager.ChangeColor(E_TextColor.red)+
+            "color, " +
+            "/color:white/" +
+            "and " +
+            "/size:up//size:up/" +
+            "size" +
+            cmdManager.ChangeSize(E_Up_Down_Init.init)+
+            " like this.",
             "Li", () => Show_Example(0)));
         dialogTexts.Add(new DialogData(
             "You can easily change text" + cmdManager.ChangeColor(E_TextColor.aqua) +
