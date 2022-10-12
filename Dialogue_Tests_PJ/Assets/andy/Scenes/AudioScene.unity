@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,8 +179,43 @@ PrefabInstance:
     - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
         type: 3}
       propertyPath: BGMSetting.Array.data[1].Name
-      value: Lobby_Second
+      value: Game_DT
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: BGMSetting.Array.data[0].Clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7770dd0a7b4ef9b4ab04b8ffc8159c25, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: BGMSetting.Array.data[0].Clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b04803efe8a82394da6853332cb423d3, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: BGMSetting.Array.data[1].Clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1b285dc9bf38a543bd862630ea397d6, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: BGMSetting.Array.data[1].Clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd9e24a0506a4144ca019b54ef8cb576, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[0].Clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 588c56f596c5e914a96d91fb7ae8a142, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[0].Clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd21f092e8075b246917028bd790df58, type: 3}
+    - target: {fileID: 114000011550523854, guid: 5528b87a94fb0cf41ac5b99b33ff4502,
+        type: 3}
+      propertyPath: SFXSetting.Array.data[0].Clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b34cb3767dfe8354897d9d65af16b523, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5528b87a94fb0cf41ac5b99b33ff4502, type: 3}
 --- !u!4 &370127473 stripped
