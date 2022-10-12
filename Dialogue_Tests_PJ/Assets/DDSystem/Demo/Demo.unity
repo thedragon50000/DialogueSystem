@@ -640,7 +640,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 3c88fa1f262d76449b05b6bc57bf0235,
+      objectReference: {fileID: 12800000, guid: 3dc8c3613851046418f974652324eef3,
         type: 3}
     - target: {fileID: 4094011683184476936, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
@@ -922,7 +922,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4094011683184477040, guid: d536fa71dd00cf349a228e41212ace48, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d536fa71dd00cf349a228e41212ace48, type: 3}
 --- !u!114 &325689816 stripped
 MonoBehaviour:
@@ -2070,6 +2071,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
+      propertyPath: Emotion.ArrayEmotion.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
       propertyPath: Emotion._sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 055c44a6ee790d743bcf692c99bfef6c,
@@ -2083,7 +2094,18 @@ PrefabInstance:
         type: 3}
       propertyPath: Emotion.ArraySprite.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 055c44a6ee790d743bcf692c99bfef6c,
+      objectReference: {fileID: 21300000, guid: 05bca287336cd1649aac2e731a2f09be,
+        type: 3}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArrayEmotion.Array.data[1]
+      value: Sad
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
+        type: 3}
+      propertyPath: Emotion.ArraySprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: b63ceefeb0d0e68408fe567b364dbe15,
         type: 3}
     - target: {fileID: 8206358605457009709, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
