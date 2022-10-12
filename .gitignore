@@ -1,0 +1,5 @@
+*.meta
+*.xml
+Dialogue_Tests_PJ/Library/
+*.cache
+Dialogue_Tests_PJ/Temp/
