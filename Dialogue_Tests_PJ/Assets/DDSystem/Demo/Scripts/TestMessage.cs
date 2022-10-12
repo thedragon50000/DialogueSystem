@@ -20,7 +20,8 @@ public class TestMessage : MonoBehaviour
             "字體加大" + cmdManager.ChangeSize(E_Up_Down_Init.init) +
             "預設字體大小", "Li"));
 
-        dialogTexts.Add(new DialogData("I am Sa. Popped out to let you know Asset can show other characters.", "Sa"));
+        dialogTexts.Add(new DialogData(
+            "I am Sa. Popped out to let you know Asset can show other characters.", "Sa"));
 
         dialogTexts.Add(new DialogData("This Asset, The D'Dialog System has many features.", "Li"));
 
