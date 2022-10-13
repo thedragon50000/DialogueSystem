@@ -78,6 +78,11 @@ namespace Doublsb.Dialog
             return temp;
         }
 
+        public string NewLine()
+        {
+            return "\n";
+        }
+
         /// <summary>
         /// 先把音效整理成enum
         /// </summary>

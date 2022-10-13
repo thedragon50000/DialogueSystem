@@ -11,7 +11,7 @@ namespace Doublsb.Dialog
         #region Public Variables
 
         /// <summary>
-        ///     叫聲等音效，指定時間播放    todo:跟AudioManager合併
+        ///     叫聲等音效，指定時間播放
         /// </summary>
         public AudioClip[] CallSE;
 
@@ -49,7 +49,6 @@ namespace Doublsb.Dialog
         public string[] ArrayEmotion = new string[] { "Normal" };
         // public Sprite[] _sprite ;
         public Sprite[] ArraySprite = new Sprite[1];    //20221007 HowWang
-        public Sprite[] ArraySprite2 = new Sprite[1];    //20221007 HowWang
 
         //================================================
         //Private Method

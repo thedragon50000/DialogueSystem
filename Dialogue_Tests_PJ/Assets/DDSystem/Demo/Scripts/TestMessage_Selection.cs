@@ -6,7 +6,6 @@ using Doublsb.Dialog;
 public class TestMessage_Selection : MonoBehaviour
 {
     public DialogManager DialogManager;
-    public DialogCommand DialogCommand;
 
     private void Awake()
     {

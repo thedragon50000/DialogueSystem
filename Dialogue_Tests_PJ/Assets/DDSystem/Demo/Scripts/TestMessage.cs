@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Doublsb.Dialog;
+using UnityEngine.UI;
 
 public class TestMessage : MonoBehaviour
 {
@@ -10,6 +12,31 @@ public class TestMessage : MonoBehaviour
     public GameObject[] Example;
 
     public CommandManager cmdManager = new CommandManager();
+
+    public Button btn;
+
+    private List<DialogData> btnClickDialogue;
+
+    /// <summary>
+    /// 做一個全域變數判斷是否有對話正在進行
+    /// todo:在第一個對話的Action委派改成true，最後一個對話改回來?
+    /// </summary>
+    private bool bIsTalking = false; //HowWang add 20221013
+
+    public void Start()
+    {
+        btn.interactable = false;
+        
+        btn.onClick.AddListener(() => DialogManager.Show(btnClickDialogue));    //bug: 會把兩個對話混在一起
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            DialogManager.Click_Window();
+        }
+    }
 
     private void Awake()
     {
@@ -34,7 +61,7 @@ public class TestMessage : MonoBehaviour
             cmdManager.ChangeColor(E_TextColor.red) +
             "顏色，" +
             "/color:white/" +
-            "還有" +"\n"+
+            "還有" + "\n" +
             "/size:up//size:up/" +
             "字體大小" +
             cmdManager.ChangeSize(E_Up_Down_Init.init) +
@@ -65,8 +92,9 @@ public class TestMessage : MonoBehaviour
 
         dialogTexts.Add(new DialogData(
             "也可以自動進入下一句" +
-            cmdManager.ChangeSpeed(0.01f) +
-            " 看仔細........................................................................../close/", "Li",
+            cmdManager.ChangeSpeed(.5f) +
+            // " 看仔細........................................................................../close/", "Li",
+            " 看仔細........................./close/", "Li",
             () => Show_Example(5)));
 
         dialogTexts.Add(new DialogData("/speed:0.1/這句不給你skip", "Li", () => Show_Example(6),
@@ -76,11 +104,17 @@ public class TestMessage : MonoBehaviour
         dialogTexts.Add(new DialogData("當然音效必不可少 /click/" +
                                        cmdManager.PlaySound("haha") +
                                        "搞啥啊（關西腔）", "Li", null, false));
-        dialogTexts.Add(new DialogData("已經跟之前的音效播放專案做了整合，整理資源時應該會比較方便吧","Sa"));
+        dialogTexts.Add(new DialogData("已經跟之前的音效播放專案做了整合，整理資源時應該會比較方便吧", "Sa"));
 
         dialogTexts.Add(new DialogData("之後還有選項的功能，但我還沒看，先這樣", "Sa"));
 
         DialogManager.Show(dialogTexts);
+
+        btnClickDialogue = new List<DialogData>();
+        btnClickDialogue.Add(new DialogData(
+            "按了個按鈕" +
+            cmdManager.Wait_for_Seconds(2)
+            , "Li"));
     }
 
     private void Show_Example(int index)

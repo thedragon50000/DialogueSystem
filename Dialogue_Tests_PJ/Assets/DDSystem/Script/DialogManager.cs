@@ -35,9 +35,20 @@ namespace Doublsb.Dialog
         private Character _current_Character;
         private DialogData _current_Data;
 
+        /// <summary>
+        /// 下一個字跟目前的字間隔幾秒印出
+        /// skip就是讓_currentDelay =0 直到那句話講完
+        /// </summary>
         private float _currentDelay;
-        private float _lastDelay;
-        
+
+        /// <summary>
+        /// 記錄_currentDelay
+        /// 不能skip的狀態就是
+        /// 不斷讓_currentDelay = _lastDelay
+        /// _currentDelay就永不為0且等速
+        /// </summary>
+        private float _tempDelay;
+
         private Coroutine _textingRoutine;
         private Coroutine _printingRoutine;
 
@@ -62,6 +73,10 @@ namespace Doublsb.Dialog
         {
             StartCoroutine(Activate_List(Data));
         }
+
+        //作者放了一個透明Button在對話框內，改掉
+        //不想要的可以自己在程式內寫程式碼呼叫Click_Window()     20221013 HowWang modified
+        //想留著也行，Printer內的Button屬性要勾
 
         public void Click_Window()
         {
@@ -91,6 +106,7 @@ namespace Doublsb.Dialog
 
             eState = E_State.Deactivate;
 
+            //離開前要釋放最後的波紋？
             if (_current_Data.Callback != null)
             {
                 _current_Data.Callback.Invoke();
@@ -125,14 +141,14 @@ namespace Doublsb.Dialog
         {
             if (_current_Character != null)
             {
-                //todo : 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
+                // 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
                 // var FindSE
                 //     = Array.Find(_current_Character.CallSE, (SE) => SE.name == SEname);
                 //
                 // CallAudio.clip = FindSE;
                 // CallAudio.Play();
 
-                AudioManager.inst.PlaySFX(SEname); //todo:Make it work
+                AudioManager.inst.PlaySFX(SEname); //20221008 HowWang add
             }
         }
         // public void Play_CallSE(Enum eVoice)
@@ -175,7 +191,7 @@ namespace Doublsb.Dialog
                     break;
             }
 
-            _lastDelay = _currentDelay;
+            _tempDelay = _currentDelay;
         }
 
         #endregion
@@ -196,7 +212,7 @@ namespace Doublsb.Dialog
         private void _initialize()
         {
             _currentDelay = Delay;
-            _lastDelay = 0.1f;
+            _tempDelay = 0.1f;
             Printer_Text.text = string.Empty;
 
             Printer.SetActive(true);
@@ -312,7 +328,7 @@ namespace Doublsb.Dialog
         private IEnumerator _waitInput()
         {
             while (!Input.GetMouseButtonDown(0)) yield return null;
-            _currentDelay = _lastDelay;
+            _currentDelay = _tempDelay;
         }
 
         private IEnumerator _print(string Text)

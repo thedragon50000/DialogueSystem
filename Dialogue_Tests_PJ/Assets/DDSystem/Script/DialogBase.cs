@@ -15,7 +15,13 @@ namespace Doublsb.Dialog
     public enum E_State
     {
         Active,
+        /// <summary>
+        ///等待點擊
+        /// </summary>
         Wait,
+        /// <summary>
+        /// 
+        /// </summary>
         Deactivate
     }
 
