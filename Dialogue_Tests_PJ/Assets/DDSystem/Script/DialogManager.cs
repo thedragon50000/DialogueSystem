@@ -106,7 +106,7 @@ namespace Doublsb.Dialog
 
             eState = E_State.Deactivate;
 
-            //離開前要釋放最後的波紋？
+            //一段話結束時發動
             if (_current_Data.Callback != null)
             {
                 _current_Data.Callback.Invoke();

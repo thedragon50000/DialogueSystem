@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Doublsb.Dialog;
 using UnityEngine.UI;
@@ -13,22 +14,55 @@ public class TestMessage : MonoBehaviour
 
     public CommandManager cmdManager = new CommandManager();
 
-    public Button btn;
+    public Button[] btnArray;
 
-    private List<DialogData> btnClickDialogue;
+    public List<DialogData>[] DialogueArray = new List<DialogData>[3];
+
 
     /// <summary>
     /// 做一個全域變數判斷是否有對話正在進行
     /// todo:在第一個對話的Action委派改成true，最後一個對話改回來?
     /// </summary>
-    private bool bIsTalking = false; //HowWang add 20221013
+    public bool bIsTalking = false; //HowWang add 20221013
 
     public void Start()
     {
-        btn.interactable = false;
-        
-        btn.onClick.AddListener(() => DialogManager.Show(btnClickDialogue));    //bug: 會把兩個對話混在一起
+        for (int i = 0; i < btnArray.Length; i++)
+        {
+            var temp = i;
+            btnArray[temp].onClick.AddListener(() => OpenDialog(temp));
+        }
     }
+
+    private void OpenDialog(int i)
+    {
+        if (bIsTalking)
+        {
+            return;
+        }
+
+        var btn = new List<DialogData>();
+        btn.Add(new DialogData(
+            $"按了{i}號按鈕" +
+            cmdManager.Wait_for_Seconds(0.5f) +
+            cmdManager.Close()
+            , "Li"));
+        btn.Add(new DialogData(cmdManager.Close(), "", EnddingDialogue, false));
+        
+        // DeActiateAllButtons(i);
+
+        DialogueShow(btn);
+    }
+
+    private void DeActiateAllButtons(int i)
+    {
+        //先把所有按鈕互動都關掉
+        for (int j = 0; j < DialogueArray.Length; j++)
+        {
+            btnArray[j].interactable = false;
+        }
+    }
+
 
     private void Update()
     {
@@ -93,28 +127,49 @@ public class TestMessage : MonoBehaviour
         dialogTexts.Add(new DialogData(
             "也可以自動進入下一句" +
             cmdManager.ChangeSpeed(.5f) +
-            // " 看仔細........................................................................../close/", "Li",
             " 看仔細........................./close/", "Li",
             () => Show_Example(5)));
 
         dialogTexts.Add(new DialogData("/speed:0.1/這句不給你skip", "Li", () => Show_Example(6),
             false));
 
-        //若只要不能跳過的效果，action那邊給個null即可，這個class只有兩個多載
+        //若只要不能跳過的效果，action那邊給個null即可
         dialogTexts.Add(new DialogData("當然音效必不可少 /click/" +
                                        cmdManager.PlaySound("haha") +
                                        "搞啥啊（關西腔）", "Li", null, false));
         dialogTexts.Add(new DialogData("已經跟之前的音效播放專案做了整合，整理資源時應該會比較方便吧", "Sa"));
 
-        dialogTexts.Add(new DialogData("之後還有選項的功能，但我還沒看，先這樣", "Sa"));
+        dialogTexts.Add(new DialogData("之後還有選項的功能，但我還沒看，先這樣" +
+                                       cmdManager.Wait_for_Seconds(2) +
+                                       "", "Sa",EnddingDialogue));
+        
+        DialogueShow(dialogTexts);
 
+        //todo:會重複同樣的話，似乎每次New一個新的會是比較好的解決方式？
+        // {
+        //     for (int i = 0; i < 3; i++)
+        //     {
+        //         var btn = new List<DialogData>();
+        //         btn.Add(new DialogData(
+        //             $"按了{i}號按鈕" +
+        //             cmdManager.Wait_for_Seconds(0.5f) +
+        //             cmdManager.Close()
+        //             , "Li"));
+        //         btn.Add(new DialogData(cmdManager.Close(), "", EnddingDialogue, false));
+        //         DialogueArray[i] = btn;
+        //     }
+        // }
+    }
+
+    private void EnddingDialogue()
+    {
+        bIsTalking = false;
+    }
+
+    private void DialogueShow(List<DialogData> dialogTexts)
+    {
+        bIsTalking = true;
         DialogManager.Show(dialogTexts);
-
-        btnClickDialogue = new List<DialogData>();
-        btnClickDialogue.Add(new DialogData(
-            "按了個按鈕" +
-            cmdManager.Wait_for_Seconds(2)
-            , "Li"));
     }
 
     private void Show_Example(int index)

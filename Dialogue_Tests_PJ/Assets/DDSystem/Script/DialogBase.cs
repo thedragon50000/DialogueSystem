@@ -76,7 +76,7 @@ namespace Doublsb.Dialog
     /// <summary>
     /// Convert string to Data. Contains List of DialogCommand and DialogFormat.
     /// 一個DialogData，是一組完整的角色立繪 + 對白 + 是否可以快轉對話的 bool
-    /// UnityAction是一種Delegate,會在對話一開始時觸發(如果有加的話)
+    /// UnityAction是一種Delegate,會在對話「結束」前觸發(如果有加的話)
     /// </summary>
     public class DialogData
     {
