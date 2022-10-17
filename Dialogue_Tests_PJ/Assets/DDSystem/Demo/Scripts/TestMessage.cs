@@ -46,7 +46,7 @@ public class TestMessage : MonoBehaviour
             $"按了{i}號按鈕" +
             cmdManager.Wait_for_Seconds(0.5f) +
             cmdManager.Close()
-            , ""));
+            , "Sa",null,false));
         btn.Add(new DialogData(cmdManager.Close(), "", EnddingDialogue, false));
         
         // DeActiateAllButtons(i);
@@ -66,10 +66,10 @@ public class TestMessage : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            DialogManager.Click_Window();
-        }
+        // if (Input.GetMouseButtonUp(0))
+        // {
+        //     DialogManager.Click_Window();
+        // }
     }
 
     private void Awake()

@@ -59,16 +59,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Andy\Script\AudioManager.cs" />
-     <Compile Include="Assets\Andy\Script\Data\Commands.cs" />
      <Compile Include="Assets\Andy\Script\Data\VoicedataManager.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
+     <Compile Include="Assets\Andy\Script\TestScene\Objects_OnClick_sc.cs" />
+     <Compile Include="Assets\Andy\Script\TestScene\Tester_sc.cs" />
      <Compile Include="Assets\DDSystem\Demo\Scripts\TestMessage.cs" />
      <Compile Include="Assets\DDSystem\Demo\Scripts\TestMessage_Selection.cs" />
      <Compile Include="Assets\DDSystem\Script\Character.cs" />
+     <Compile Include="Assets\DDSystem\Script\Commands.cs" />
      <Compile Include="Assets\DDSystem\Script\DialogBase.cs" />
      <Compile Include="Assets\DDSystem\Script\DialogManager.cs" />
      <Compile Include="Assets\DDSystem\Script\EmotionDrawer.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+     <Compile Include="Assets\DontDestroy.cs" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />

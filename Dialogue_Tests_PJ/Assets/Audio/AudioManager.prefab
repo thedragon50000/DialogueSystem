@@ -70,7 +70,7 @@ MonoBehaviour:
       Max: 1
       Min: 1
     MixerGroup: {fileID: 24310216, guid: c3600fc3feaac3f458220849880b6289, type: 2}
-  - Name: Lobby_Main
+  - Name: Lobby_Second
     Clip:
     - {fileID: 8300000, guid: 1d82aa070ac518e4eb5ee5fc7a2c6cc7, type: 3}
     - {fileID: 8300000, guid: 8f8295e3e74864043ae2254643d48eb6, type: 3}
