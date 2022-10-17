@@ -46,7 +46,7 @@ public class TestMessage : MonoBehaviour
             $"按了{i}號按鈕" +
             cmdManager.Wait_for_Seconds(0.5f) +
             cmdManager.Close()
-            , "Li"));
+            , ""));
         btn.Add(new DialogData(cmdManager.Close(), "", EnddingDialogue, false));
         
         // DeActiateAllButtons(i);
@@ -145,7 +145,7 @@ public class TestMessage : MonoBehaviour
         
         DialogueShow(dialogTexts);
 
-        //todo:會重複同樣的話，似乎每次New一個新的會是比較好的解決方式？
+        //todo:每按一次文本就會多一倍，似乎每次New一個新的會是比較好的解決方式？
         // {
         //     for (int i = 0; i < 3; i++)
         //     {
