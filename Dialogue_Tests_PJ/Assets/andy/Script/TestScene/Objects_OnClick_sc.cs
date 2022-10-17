@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using Doublsb.Dialog;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class Objects_OnClick_sc : MonoBehaviour
 {
@@ -25,8 +26,10 @@ public class Objects_OnClick_sc : MonoBehaviour
     {
         if (GameManager.IsTalking())
         {
+            print("isTalking");
             return;
         }
+
         iClickTimes++;
 
         act += GameManager.EnddingDialogue;
@@ -47,8 +50,40 @@ public class Objects_OnClick_sc : MonoBehaviour
 
     private void SpecialDialog(List<DialogData> dialogDatas)
     {
+        int temp = iClickTimes + Random.Range(0, 5); //也可以兩個都是正解
         dialogDatas.Add(new DialogData("......", "Padko"));
-        dialogDatas.Add(new DialogData($"你已經點{iClickTimes}次了", "Padko", act));
+        var Question1 = new DialogData("你知道你已經點了幾次了嗎?", "Padko");
+        Question1.SelectList.Add(iClickTimes.ToString(), iClickTimes.ToString());
+        Question1.SelectList.Add((temp.ToString()), (temp.ToString()));
+        Question1.Callback = () => CheckAnswer();
+        dialogDatas.Add(Question1);
+        // dialogDatas.Add(new DialogData($"你已經點{iClickTimes}次了", "Padko", act));
+    }
+
+    /// <summary>
+    /// 對答案，不一定需要像原作者那樣訂一個key
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    private void CheckAnswer()
+    {
+        var dialog = new List<DialogData>();
+        act += GameManager.EnddingDialogue;
+        act += () => act = null;
+
+        if (GameManager.DialogManager.Result == iClickTimes.ToString())
+        {
+            dialog.Add(new DialogData($"沒錯，你已經點{iClickTimes}次了", "Padko"));
+            dialog.Add(new DialogData("別再點了(怒)", "Padko", act));
+        }
+        else
+        {
+            //bug: 選完選項的第一句callback，完全呼叫不到，不知道怎麼解                                                 ↓這個
+            dialog.Add(new DialogData( "腦袋壞掉", "Padko", () => GameManager.EnddingDialogue()));
+            dialog.Add(new DialogData($"連自己點了{iClickTimes}次都不知道", "Padko", act));
+        }
+
+        GameManager.DialogueShow(dialog);
     }
 
     void EndDialogue()
@@ -63,17 +98,17 @@ public class Objects_OnClick_sc : MonoBehaviour
         {
             return;
         }
-
+    
         act = null;
         act += () => bFirstEnter = false;
         act += GameManager.EnddingDialogue;
-
+    
         var dialog = new List<DialogData>();
         dialog.Add(new DialogData(
             cmd.ChangeSpeed(0.9f) +
             "" +
             "走開啦", "Padko", act, false));
-
+    
         // print("fuck off");
         GameManager.DialogueShow(dialog);
     }

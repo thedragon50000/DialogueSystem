@@ -379,8 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae18f33a2bf810a4e8ed49eda1e42b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iClickTimes: 0
   GameManager: {fileID: 717766298}
-  iSpecialTimes: 0
+  iSpecialTimes: 3
   bFirstEnter: 1
 --- !u!61 &570380198
 BoxCollider2D:
@@ -514,6 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogManager: {fileID: 598645163}
+  bIsTalking: 0
 --- !u!4 &717766299
 Transform:
   m_ObjectHideFlags: 0

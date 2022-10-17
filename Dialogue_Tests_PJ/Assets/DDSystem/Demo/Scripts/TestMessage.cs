@@ -43,12 +43,13 @@ public class TestMessage : MonoBehaviour
 
         var btn = new List<DialogData>();
         btn.Add(new DialogData(
-            $"按了{i}號按鈕" +
-            cmdManager.Wait_for_Seconds(0.5f) +
-            cmdManager.Close()
-            , "Sa",null,false));
-        btn.Add(new DialogData(cmdManager.Close(), "", EnddingDialogue, false));
-        
+            $"按了{i}號按鈕" 
+            // +
+            // cmdManager.Wait_for_Seconds(0.5f) +
+            // cmdManager.Close()
+            , "Sa", EnddingDialogue, false));
+        // btn.Add(new DialogData(cmdManager.Close(), "", EnddingDialogue, false));
+
         // DeActiateAllButtons(i);
 
         DialogueShow(btn);
@@ -66,10 +67,10 @@ public class TestMessage : MonoBehaviour
 
     private void Update()
     {
-        // if (Input.GetMouseButtonUp(0))
-        // {
-        //     DialogManager.Click_Window();
-        // }
+        if (Input.GetMouseButtonUp(0))
+        {
+            DialogManager.Click_Window();
+        }
     }
 
     private void Awake()
@@ -141,11 +142,11 @@ public class TestMessage : MonoBehaviour
 
         dialogTexts.Add(new DialogData("之後還有選項的功能，但我還沒看，先這樣" +
                                        cmdManager.Wait_for_Seconds(2) +
-                                       "", "Sa",EnddingDialogue));
-        
-        DialogueShow(dialogTexts);
+                                       "", "Sa", EnddingDialogue));
 
-        //todo:每按一次文本就會多一倍，似乎每次New一個新的會是比較好的解決方式？
+        // DialogueShow(dialogTexts);
+
+        //todo:每按一次文本就會多一倍，每次New一個新的會是比較好的解決方式？
         // {
         //     for (int i = 0; i < 3; i++)
         //     {

@@ -8,15 +8,15 @@ using UnityEngine.UI;
 public class Tester_sc : MonoBehaviour
 {
     public DialogManager DialogManager;
-    private bool bIsTalking = false;
+    public bool bIsTalking = false;
     public CommandManager cmd = new CommandManager();
 
     // Start is called before the first frame update
     void Start()
     {
-        var dd = new List<DialogData>();
-        dd.Add(new DialogData( "test","",EnddingDialogue));
-        DialogueShow(dd);
+        // var dd = new List<DialogData>();
+        // dd.Add(new DialogData( "test","",EnddingDialogue));
+        // DialogueShow(dd);
     }
 
     // Update is called once per frame
