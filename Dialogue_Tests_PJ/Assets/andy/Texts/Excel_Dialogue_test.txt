@@ -1,0 +1,8 @@
+[國棟]
+/color:white//size:60//speed:0.1/老子
+
+/color:fuchsia//size:80//speed:1/瘋狗
+
+/color:aqua//size:60//click//speed:0.1/的外號
+[國棟]
+/color:blue//size:60//speed:0.5/10歲就有啦！

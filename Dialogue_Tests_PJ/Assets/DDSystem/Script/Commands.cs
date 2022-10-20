@@ -57,7 +57,7 @@ namespace Doublsb.Dialog
         {
             string temp = "";
             string sSpeed = eUpDownInit.ToString();
-            temp = $"/wait:{sSpeed}/";
+            temp = $"/speed:{sSpeed}/";
 
             return temp;
         }
@@ -65,7 +65,7 @@ namespace Doublsb.Dialog
         public string ChangeSpeed(float speed)
         {
             string temp = "";
-            temp = $"/wait:{speed}/";
+            temp = $"/speed:{speed}/";
 
             return temp;
         }

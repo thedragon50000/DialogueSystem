@@ -11,7 +11,8 @@ public class String_sc : MonoBehaviour
 
     public TextAsset txt;
     public DialogManager DialogManager;
-
+    
+    
     //"內文&指令","角色名"
 
     //暫定角色名為國棟跟統神
@@ -130,6 +131,20 @@ public class String_sc : MonoBehaviour
     public DialogData Dialogue_Speaker(string dialog, string speaker)
     {
         return new DialogData(dialog, speaker);
+    }
+    
+    public class DialogDataTool
+    {
+        public string color; // ↓預設格式，每次增加請複製一份↓
+        public string size; // 
+        public string emote; // 
+        public string click; // 
+        public string wait; // 
+        public string speed; // 
+        public string speaker; // 
+        public string dialog; // 
+        public string newline; // 
+        public string close; // 
     }
 }
 
