@@ -471,7 +471,7 @@ Transform:
   m_LocalScale: {x: 0.27311814, y: 0.27311814, z: 0.27311814}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &598645163 stripped
 MonoBehaviour:
@@ -564,7 +564,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717766297
 GameObject:
@@ -610,7 +610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &717766300
 MonoBehaviour:
@@ -625,7 +625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strArrayTemp: []
-  txt: {fileID: 4900000, guid: e8f60635bd12dc64b8943315734cafc2, type: 3}
+  GameManager: {fileID: 717766298}
+  txt: {fileID: 4900000, guid: 5340bcd9ec0320f40b017a563bcabc66, type: 3}
   DialogManager: {fileID: 598645163}
 --- !u!1001 &842642464
 PrefabInstance:
@@ -793,8 +794,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1852827636}
+  - {fileID: 1373258295}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1017792351
 PrefabInstance:
@@ -924,6 +926,12 @@ PrefabInstance:
 --- !u!224 &1188054845 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4094011683457312916, guid: d536fa71dd00cf349a228e41212ace48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1592137299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1373258295 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4094011683184477044, guid: d536fa71dd00cf349a228e41212ace48,
     type: 3}
   m_PrefabInstance: {fileID: 1592137299}
   m_PrefabAsset: {fileID: 0}
@@ -1146,14 +1154,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1592137299
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 883082204}
     m_Modifications:
     - target: {fileID: 1347563849434575771, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
@@ -1229,7 +1237,7 @@ PrefabInstance:
     - target: {fileID: 4094011683184477044, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4094011683184477044, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}

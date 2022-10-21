@@ -52,6 +52,16 @@ public class String_sc : MonoBehaviour
     private void ActionAdd(List<DialogData> temp, int[] iDialogAction, UnityAction[] actions)
     {
         int itemp = -1;
+
+        foreach (int i in iDialogAction)
+        {
+            if (i>temp.Count)
+            {
+                print("錯誤，指定的位置超出對話總數");
+                return;
+            }
+        }
+            
         foreach (int i in iDialogAction)
         {
             itemp++;
@@ -61,6 +71,11 @@ public class String_sc : MonoBehaviour
 
     private void ActionAdd(List<DialogData> temp, int iDialogAction, UnityAction action)
     {
+        if (iDialogAction>temp.Count)
+        {
+            print("錯誤，指定的位置超出對話總數");
+            return;
+        }
         temp[iDialogAction - 1].Callback = action;
     }
 
