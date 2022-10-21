@@ -3,23 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Doublsb.Dialog;
+using UnityEngine.Assertions;
+using UnityEngine.Events;
 
 public class String_sc : MonoBehaviour
 {
     public string[] strArrayTemp;
     // public string[] strArrayTranformed;
 
+    public Tester_sc GameManager;
     public TextAsset txt;
     public DialogManager DialogManager;
-    
-    
+
+
     //"內文&指令","角色名"
 
     //暫定角色名為國棟跟統神
 
     private void Awake()
     {
-        strArrayTemp = txt.text.Split('\n');
+        if (txt != null)
+        {
+            strArrayTemp = txt.text.Split('\n');
+        }
     }
 
     void Start()
@@ -28,12 +34,34 @@ public class String_sc : MonoBehaviour
 
         // print(strArrayTemp[0].TrimEnd().TrimEnd(']')); //讀取文件時每一段換行都留有空白?先消除空白才能消除中括號
 
+        temp.Add(new DialogData("/speed:0//close/", "", GameManager.EnddingDialogue, true));
 
-        DialogManager.Show(temp);
+        ActionAdd(temp, new[] {1, 2}, new UnityAction[] {() => print("添加action1"), () => print("添加action2")});
+
+        ActionAdd(temp, 2, () => print("第二句再多加一個action3"));
+
+        GameManager.DialogueShow(temp);
+
+        // DialogManager.Show(temp);
         // for (int i = 0; i < strArrayTemp.Length; i++)
         // {
         //     print(strArrayTemp[i]);
         // }
+    }
+
+    private void ActionAdd(List<DialogData> temp, int[] iDialogAction, UnityAction[] actions)
+    {
+        int itemp = -1;
+        foreach (int i in iDialogAction)
+        {
+            itemp++;
+            temp[i - 1].Callback = actions[itemp];
+        }
+    }
+
+    private void ActionAdd(List<DialogData> temp, int iDialogAction, UnityAction action)
+    {
+        temp[iDialogAction - 1].Callback = action;
     }
 
     // Update is called once per frame
@@ -132,7 +160,7 @@ public class String_sc : MonoBehaviour
     {
         return new DialogData(dialog, speaker);
     }
-    
+
     public class DialogDataTool
     {
         public string color; // ↓預設格式，每次增加請複製一份↓
