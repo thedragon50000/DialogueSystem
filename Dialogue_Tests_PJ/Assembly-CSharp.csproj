@@ -61,6 +61,7 @@
      <Compile Include="Assets\Andy\Script\AudioManager.cs" />
      <Compile Include="Assets\Andy\Script\Data\VoicedataManager.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
+     <Compile Include="Assets\Andy\Script\TestScene\NormalCharacterOnClick_sc.cs" />
      <Compile Include="Assets\Andy\Script\TestScene\Objects_OnClick_sc.cs" />
      <Compile Include="Assets\Andy\Script\TestScene\ReadingExcel_sc.cs" />
      <Compile Include="Assets\Andy\Script\TestScene\String_sc.cs" />

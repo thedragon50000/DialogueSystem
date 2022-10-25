@@ -15,12 +15,18 @@ public class Objects_OnClick_sc : MonoBehaviour
 
     public Tester_sc GameManager;
     public CommandManager cmd = new CommandManager();
+    private String_sc txtReader;
 
     [Tooltip("點超過幾次之後觸發特殊事件")] public int iSpecialTimes;
 
     [Tooltip("是否為第一次滑鼠經過")] public bool bFirstEnter = true;
 
     public UnityAction act = null;
+
+    private void Awake()
+    {
+        txtReader = gameObject.GetComponent<String_sc>();
+    }
 
     public void OnMouseUp()
     {

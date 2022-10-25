@@ -13,7 +13,6 @@ public class String_sc : MonoBehaviour
 
     public Tester_sc GameManager;
     public TextAsset txt;
-    public DialogManager DialogManager;
 
 
     //"內文&指令","角色名"
@@ -28,28 +27,27 @@ public class String_sc : MonoBehaviour
         }
     }
 
-    void Start()
+    public void Read_and_Transform()
     {
         var temp = Add2DialogList(TxtTransform(strArrayTemp));
 
         // print(strArrayTemp[0].TrimEnd().TrimEnd(']')); //讀取文件時每一段換行都留有空白?先消除空白才能消除中括號
 
-        temp.Add(new DialogData("/speed:0//close/", "", GameManager.EnddingDialogue, true));
+        ActionAdd(temp, temp.Count, GameManager.EnddingDialogue);
 
-        ActionAdd(temp, new[] {1, 2}, new UnityAction[] {() => print("添加action1"), () => print("添加action2")});
-
-        ActionAdd(temp, 2, () => print("第二句再多加一個action3"));
-
+        // ActionAdd(temp, new[] {1, 2}, new UnityAction[] {() => print("添加action1"), () => print("添加action2")});
+        
         GameManager.DialogueShow(temp);
 
-        // DialogManager.Show(temp);
         // for (int i = 0; i < strArrayTemp.Length; i++)
         // {
         //     print(strArrayTemp[i]);
         // }
     }
 
-    private void ActionAdd(List<DialogData> temp, int[] iDialogAction, UnityAction[] actions)
+    #region 若有需要加Action，再另外寫一個腳本額外添加進去
+
+    public void ActionAdd(List<DialogData> temp, int[] iDialogAction, UnityAction[] actions)
     {
         int itemp = -1;
 
@@ -69,7 +67,7 @@ public class String_sc : MonoBehaviour
         }
     }
 
-    private void ActionAdd(List<DialogData> temp, int iDialogAction, UnityAction action)
+    public void ActionAdd(List<DialogData> temp, int iDialogAction, UnityAction action)
     {
         if (iDialogAction>temp.Count)
         {
@@ -79,10 +77,8 @@ public class String_sc : MonoBehaviour
         temp[iDialogAction - 1].Callback = action;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    #endregion
+
 
     string[,] TxtTransform(string[] strArray)
     {
@@ -174,20 +170,6 @@ public class String_sc : MonoBehaviour
     public DialogData Dialogue_Speaker(string dialog, string speaker)
     {
         return new DialogData(dialog, speaker);
-    }
-
-    public class DialogDataTool
-    {
-        public string color; // ↓預設格式，每次增加請複製一份↓
-        public string size; // 
-        public string emote; // 
-        public string click; // 
-        public string wait; // 
-        public string speed; // 
-        public string speaker; // 
-        public string dialog; // 
-        public string newline; // 
-        public string close; // 
     }
 }
 
