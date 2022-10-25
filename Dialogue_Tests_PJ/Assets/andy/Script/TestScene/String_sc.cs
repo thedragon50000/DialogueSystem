@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using UnityEngine;
 using Doublsb.Dialog;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
+using System.Linq;
 
 public class String_sc : MonoBehaviour
 {
@@ -17,8 +19,6 @@ public class String_sc : MonoBehaviour
 
     //"內文&指令","角色名"
 
-    //暫定角色名為國棟跟統神
-
     private void Awake()
     {
         if (txt != null)
@@ -27,7 +27,7 @@ public class String_sc : MonoBehaviour
         }
     }
 
-    public void Read_and_Transform()
+    public List<DialogData> Read_and_Transform()
     {
         var temp = Add2DialogList(TxtTransform(strArrayTemp));
 
@@ -36,13 +36,11 @@ public class String_sc : MonoBehaviour
         ActionAdd(temp, temp.Count, GameManager.EnddingDialogue);
 
         // ActionAdd(temp, new[] {1, 2}, new UnityAction[] {() => print("添加action1"), () => print("添加action2")});
-        
-        GameManager.DialogueShow(temp);
 
-        // for (int i = 0; i < strArrayTemp.Length; i++)
-        // {
-        //     print(strArrayTemp[i]);
-        // }
+        //只讀不播放
+        // GameManager.DialogueShow(temp);
+
+        return temp;
     }
 
     #region 若有需要加Action，再另外寫一個腳本額外添加進去
@@ -53,13 +51,13 @@ public class String_sc : MonoBehaviour
 
         foreach (int i in iDialogAction)
         {
-            if (i>temp.Count)
+            if (i > temp.Count)
             {
                 print("錯誤，指定的位置超出對話總數");
                 return;
             }
         }
-            
+
         foreach (int i in iDialogAction)
         {
             itemp++;
@@ -69,11 +67,12 @@ public class String_sc : MonoBehaviour
 
     public void ActionAdd(List<DialogData> temp, int iDialogAction, UnityAction action)
     {
-        if (iDialogAction>temp.Count)
+        if (iDialogAction > temp.Count)
         {
             print("錯誤，指定的位置超出對話總數");
             return;
         }
+
         temp[iDialogAction - 1].Callback = action;
     }
 
@@ -88,10 +87,9 @@ public class String_sc : MonoBehaviour
 
         for (int i = 0; i < strArray.Length; i++)
         {
-            if (CheckSpeaker(strArray[i]) == E_Character.統神.ToString()
-                || CheckSpeaker(strArray[i]) == E_Character.國棟.ToString())
+            if (bCheckSpeakers(CheckSpeaker(strArray[i])))
             {
-                print(CheckSpeaker(strArray[i]) + "是統神或國棟");
+                print(CheckSpeaker(strArray[i]) + "是一個段落");
                 index++;
             }
         }
@@ -99,7 +97,7 @@ public class String_sc : MonoBehaviour
         var temp = index + 1;
         print("共有幾個對話框:" + temp);
 
-        string[,] str = new string[index + 1, 2]; //對話內容,說話者
+        string[,] str = new string[temp, 2]; //對話內容,說話者
 
         #endregion
 
@@ -107,26 +105,23 @@ public class String_sc : MonoBehaviour
 
         #region 對話跟說話者都分類好了
 
-        for (int i = 0; i < strArray.Length; i++)
+        for (int i = 0; i < strArray.Length; i++) //i是第幾行
         {
-            if (CheckSpeaker(strArray[i]) == E_Character.統神.ToString()
-                || CheckSpeaker(strArray[i]) == E_Character.國棟.ToString())
+            if (bCheckSpeakers(CheckSpeaker(strArray[i])))
             {
                 index++;
-                str[index, 1] = CheckSpeaker(strArray[i]); //記住說話者
+                str[index, 1] = CheckSpeaker(strArray[i]);
                 print($"第{index}個對話的說話者:" + strArray[i]);
             }
-
-            else if (CheckSpeaker(strArray[i]) != E_Character.統神.ToString()
-                     && CheckSpeaker(strArray[i]) != E_Character.國棟.ToString())
+            else if (!bCheckSpeakers(CheckSpeaker(strArray[i])))
             {
-                print(strArray[i]);
+                // print(strArray[i]);
                 str[index, 0] += strArray[i]; //一段台詞
                 print($"第{index}個對話的台詞:" + strArray[i]);
             }
         }
 
-        SpeakerNameTransform(str);
+        // SpeakerNameTransform(str);
 
         #endregion
 
@@ -151,30 +146,32 @@ public class String_sc : MonoBehaviour
         return dialog;
     }
 
-    public void SpeakerNameTransform(string[,] s)
-    {
-        for (int i = 0; i < s.GetLength(0); i++)
-        {
-            if (s[i, 1] == E_Character.國棟.ToString())
-            {
-                s[i, 1] = "dong";
-            }
-
-            if (s[i, 1] == E_Character.統神.ToString())
-            {
-                s[i, 1] = "tong";
-            }
-        }
-    }
 
     public DialogData Dialogue_Speaker(string dialog, string speaker)
     {
         return new DialogData(dialog, speaker);
     }
+
+    bool bCheckSpeakers(string speaker)
+    {
+        for (int i = 0; i < (int) E_Character.MAX; i++)
+        {
+            E_Character temp = (E_Character) i;
+            if (speaker == temp.ToString())
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
 
 public enum E_Character
 {
-    統神,
-    國棟
+    tong,
+    dong,
+    Me,
+    Padko,
+    MAX
 }

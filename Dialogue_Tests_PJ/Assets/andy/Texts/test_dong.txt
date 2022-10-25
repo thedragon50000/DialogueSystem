@@ -1,0 +1,9 @@
+[dong]
+/color:white//size:60//speed:0.1/老子
+/color:white//size:60//speed:0.1/瘋狗
+/color:white//size:60//speed:0.1/的外號
+/color:white//size:60//speed:0.1/10歲就有啦
+[tong]
+/color:white//size:60//speed:0.1/O4O真的假的
+[tong]
+/color:white//size:60//speed:0.1/55555555

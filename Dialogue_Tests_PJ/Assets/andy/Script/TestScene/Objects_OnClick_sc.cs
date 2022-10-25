@@ -91,13 +91,7 @@ public class Objects_OnClick_sc : MonoBehaviour
 
         GameManager.DialogueShow(dialog);
     }
-
-    void EndDialogue()
-    {
-        GameManager.EnddingDialogue();
-        iClickTimes++;
-    }
-
+    
     public void OnMouseEnter()
     {
         if (!bFirstEnter || GameManager.IsTalking())
