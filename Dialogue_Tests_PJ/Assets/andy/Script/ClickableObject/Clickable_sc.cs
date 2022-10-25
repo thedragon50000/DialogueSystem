@@ -8,23 +8,27 @@ using UnityEngine.Events;
 public abstract class Clickable_sc : MonoBehaviour
 {
     public Tester_sc GameManager;
-    public CommandManager cmd = new CommandManager();
-    private String_sc _txtReader;
-    
+    private CommandManager cmd = new CommandManager();
+    String_sc _txtReader;
 
-    private void Awake()
+    public virtual void Awake()
     {
         _txtReader = gameObject.GetComponent<String_sc>();
     }
 
     public virtual void OnMouseUp()
     {
+        StartDialogIfNotTalking();
+    }
+
+    private void StartDialogIfNotTalking()
+    {
         if (GameManager.IsTalking())
         {
             return;
         }
 
-        TxtTransform();
+        DialogueShow();
     }
 
     public List<DialogData> TxtTransform()
@@ -32,8 +36,8 @@ public abstract class Clickable_sc : MonoBehaviour
         return _txtReader.Read_and_Transform();
     }
 
-    void DialogueShow(List<DialogData> list)
+    protected void DialogueShow()
     {
-        GameManager.DialogueShow(list);
+        GameManager.DialogueShow(TxtTransform());
     }
 }

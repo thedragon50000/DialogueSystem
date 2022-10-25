@@ -9,13 +9,11 @@ using Doublsb.Dialog;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class Objects_OnClick_sc : MonoBehaviour
+public class Objects_OnClick_sc : Clickable_sc
 {
     public int iClickTimes = 0;
 
-    public Tester_sc GameManager;
     public CommandManager cmd = new CommandManager();
-    private String_sc txtReader;
 
     [Tooltip("點超過幾次之後觸發特殊事件")] public int iSpecialTimes;
 
@@ -23,13 +21,14 @@ public class Objects_OnClick_sc : MonoBehaviour
 
     public UnityAction act = null;
 
-    private void Awake()
+    public override void Awake()
     {
-        txtReader = gameObject.GetComponent<String_sc>();
+        print("Awake overide");
     }
-
-    public void OnMouseUp()
+    
+    public override void OnMouseUp()
     {
+        
         if (GameManager.IsTalking())
         {
             print("isTalking");
