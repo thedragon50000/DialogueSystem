@@ -27,6 +27,9 @@ namespace Doublsb.Dialog
 
         [HideInInspector] public E_State eState;
 
+        /// <summary>
+        /// 選完選項之後，Result會更改為對應的key
+        /// </summary>
         [HideInInspector] public string Result;
 
         //================================================
