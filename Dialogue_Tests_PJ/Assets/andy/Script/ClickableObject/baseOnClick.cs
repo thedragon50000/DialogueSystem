@@ -5,12 +5,16 @@ using Doublsb.Dialog;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class baseClickable_sc : MonoBehaviour
+public abstract class baseOnClick : MonoBehaviour
 {
     public Tester_sc GameManager;
     protected readonly CommandManager Cmd = new CommandManager();
     public baseString _txtReader;
-    public List<DialogData> lstDialog;
+    
+    /// <summary>
+    /// 為了方便從外部加入Action而宣告
+    /// </summary>
+    protected List<DialogData> lstDialog;
     protected void Awake()
     {
         _txtReader = gameObject.GetComponent<String_sc>();
@@ -19,7 +23,6 @@ public abstract class baseClickable_sc : MonoBehaviour
     public virtual void OnMouseUp()
     {
         lstDialog = _txtReader.Read_and_Transform();
-
         StartDialogIfNotTalking(lstDialog);
     }
 

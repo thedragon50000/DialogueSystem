@@ -4,6 +4,6 @@ using Doublsb.Dialog;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NormalCharacterOnClick_sc : baseClickable_sc
+public class NormalCharacterOnClick_sc : baseOnClick
 {
 }

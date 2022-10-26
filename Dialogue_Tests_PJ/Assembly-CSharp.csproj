@@ -59,15 +59,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Andy\Script\AudioManager.cs" />
-     <Compile Include="Assets\Andy\Script\ClickableObject\baseClickable_sc.cs" />
+     <Compile Include="Assets\Andy\Script\ClickableObject\NormalCharacterOnClick_sc.cs" />
+     <Compile Include="Assets\Andy\Script\ClickableObject\Objects_OnClick_sc.cs" />
+     <Compile Include="Assets\Andy\Script\ClickableObject\ReadTxt\String_sc.cs" />
+     <Compile Include="Assets\Andy\Script\ClickableObject\ReadTxt\baseString.cs" />
+     <Compile Include="Assets\Andy\Script\ClickableObject\baseOnClick.cs" />
      <Compile Include="Assets\Andy\Script\Data\VoicedataManager.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
-     <Compile Include="Assets\Andy\Script\TestScene\NormalCharacterOnClick_sc.cs" />
-     <Compile Include="Assets\Andy\Script\TestScene\Objects_OnClick_sc.cs" />
      <Compile Include="Assets\Andy\Script\TestScene\ReadingExcel_sc.cs" />
-     <Compile Include="Assets\Andy\Script\TestScene\String_sc.cs" />
      <Compile Include="Assets\Andy\Script\TestScene\Tester_sc.cs" />
-     <Compile Include="Assets\Andy\Script\TestScene\baseString.cs" />
      <Compile Include="Assets\DDSystem\Demo\Scripts\TestMessage.cs" />
      <Compile Include="Assets\DDSystem\Demo\Scripts\TestMessage_Selection.cs" />
      <Compile Include="Assets\DDSystem\Script\Character.cs" />

@@ -12,11 +12,11 @@ public abstract class baseString : MonoBehaviour
 
     public Tester_sc gameManager;
     public TextAsset txt;
-    public baseClickable_sc clickObject;
+    public baseOnClick clickObject;
 
     protected void Awake()
     {
-        clickObject = gameObject.GetComponent<baseClickable_sc>();
+        clickObject = gameObject.GetComponent<baseOnClick>();
 
         if (txt != null)
         {

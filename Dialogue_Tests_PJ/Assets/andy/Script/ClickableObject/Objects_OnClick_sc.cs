@@ -9,7 +9,7 @@ using Doublsb.Dialog;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class Objects_OnClick_sc : baseClickable_sc
+public class Objects_OnClick_sc : baseOnClick
 {
     public int iClickTimes = 0;
 
@@ -31,17 +31,19 @@ public class Objects_OnClick_sc : baseClickable_sc
         act += GameManager.EnddingDialogue;
         act += () => act = null;
 
-        var dialog = new List<DialogData>();
+        // lstDialog = new List<DialogData>();
+        lstDialog.Clear();
         if (iClickTimes >= iSpecialTimes)
         {
-            SpecialDialog(dialog);
+            SpecialDialog(lstDialog);
+            ActionSet(lstDialog, 1, () => print("示範加action在第1句"));
         }
         else
         {
-            dialog.Add(new DialogData("......", "Padko", act));
+            lstDialog.Add(new DialogData("......", "Padko", act));
         }
 
-        StartDialogIfNotTalking(dialog);
+        StartDialogIfNotTalking(lstDialog);
     }
 
     private void SpecialDialog(List<DialogData> dialogDatas)
@@ -58,7 +60,7 @@ public class Objects_OnClick_sc : baseClickable_sc
     /// </summary>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    protected override void CheckSelectResult(List<DialogData> dialog,UnityAction action)
+    protected override void CheckSelectResult(List<DialogData> dialog, UnityAction action)
     {
         if (GameManager.DialogManager.Result == iClickTimes.ToString())
         {
@@ -84,13 +86,13 @@ public class Objects_OnClick_sc : baseClickable_sc
         act += GameManager.EnddingDialogue;
         act += () => act = null;
 
-        var dialog = new List<DialogData>();
-        dialog.Add(new DialogData(
+        lstDialog = new List<DialogData>();
+        lstDialog.Add(new DialogData(
             Cmd.ChangeSpeed(0.9f) +
             "" +
             "走開啦", "Padko", act, false));
 
         // print("fuck off");
-        GameManager.DialogueShow(dialog);
+        GameManager.DialogueShow(lstDialog);
     }
 }
