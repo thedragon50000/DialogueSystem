@@ -4,22 +4,25 @@ using System.Collections.Generic;
 using Doublsb.Dialog;
 using UnityEngine;
 using UnityEngine.Events;
+using Zenject;
 
 public abstract class baseOnClick : MonoBehaviour
 {
-    public Tester_sc GameManager;
+    [HideInInspector] [Inject] public Tester_sc gameManager;
+
     protected readonly CommandManager Cmd = new CommandManager();
-    public baseString _txtReader;
-    
+    [HideInInspector] public baseString _txtReader;
+
     /// <summary>
     /// 為了方便從外部加入Action而宣告
     /// </summary>
     protected List<DialogData> lstDialog;
+
     protected void Awake()
     {
-        _txtReader = gameObject.GetComponent<String_sc>();
+        _txtReader = gameObject.GetComponent<TxtReader_Normal_sc>();
     }
-    
+
     public virtual void OnMouseUp()
     {
         lstDialog = _txtReader.Read_and_Transform();
@@ -28,12 +31,12 @@ public abstract class baseOnClick : MonoBehaviour
 
     protected void StartDialogIfNotTalking(List<DialogData> dialog)
     {
-        if (GameManager.IsTalking())
+        if (gameManager.IsTalking())
         {
             return;
         }
 
-        GameManager.DialogueShow(dialog);
+        gameManager.DialogueShow(dialog);
     }
 
     protected void ActionSet(List<DialogData> temp, int[] iDialogAction, UnityAction[] actions)
@@ -111,16 +114,15 @@ public abstract class baseOnClick : MonoBehaviour
     private void AfterSelect()
     {
         var dialog = new List<DialogData>();
-        UnityAction act = GameManager.EnddingDialogue;
+        UnityAction act = gameManager.EnddingDialogue;
         act += () => act = null;
 
         CheckSelectResult(dialog, act);
 
-        GameManager.DialogueShow(dialog);
+        gameManager.DialogueShow(dialog);
     }
 
     protected virtual void CheckSelectResult(List<DialogData> dialog, UnityAction action)
     {
-        
     }
 }

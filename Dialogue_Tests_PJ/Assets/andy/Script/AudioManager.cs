@@ -5,7 +5,7 @@ using baseSys.Audio.Sources;
 
 public class AudioManager : MonoBehaviour {
 
-    public static AudioManager inst;
+    // public static AudioManager inst;
 
     /// <summary>
     /// 音樂資源設定，要播放的音樂也直接拉進來
@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour {
     float SFXValue = 0.5f;
 
     void Awake() {
-        inst = this;
+        // inst = this;
 
         //生成兩個播放器
         BGM = new AudioPlayer(gameObject, "BGMPlayer", BGMSetting, BGMValue);

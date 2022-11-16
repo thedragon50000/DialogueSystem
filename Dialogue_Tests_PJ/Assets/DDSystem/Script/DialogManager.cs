@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using Zenject;
 
 namespace Doublsb.Dialog
 {
     public class DialogManager : MonoBehaviour
     {
+        [Inject] private AudioManager audio;
         //================================================
         //Public Variable
         //================================================
@@ -145,13 +147,15 @@ namespace Doublsb.Dialog
             if (_current_Character != null)
             {
                 // 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
+                
                 // var FindSE
                 //     = Array.Find(_current_Character.CallSE, (SE) => SE.name == SEname);
                 //
                 // CallAudio.clip = FindSE;
                 // CallAudio.Play();
 
-                AudioManager.inst.PlaySFX(SEname); //20221008 HowWang add
+                // AudioManager.inst.PlaySFX(SEname); //20221008 HowWang add
+                audio.PlaySFX(SEname); //20221008 HowWang add
             }
         }
         // public void Play_CallSE(Enum eVoice)
