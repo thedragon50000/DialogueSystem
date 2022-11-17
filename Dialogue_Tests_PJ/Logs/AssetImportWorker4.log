@@ -1,0 +1,278 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.12f1 (8af3c3e441b1) revision 9106371'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'zh' Physical Memory: 32160 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2021.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/Andy/Desktop/DialogueSystem/Dialogue_Tests_PJ
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+54565
+Successfully changed project path to: C:/Users/Andy/Desktop/DialogueSystem/Dialogue_Tests_PJ
+C:/Users/Andy/Desktop/DialogueSystem/Dialogue_Tests_PJ
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 127.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.12f1 (8af3c3e441b1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Andy/Desktop/DialogueSystem/Dialogue_Tests_PJ/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.15.1278
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2021.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2021.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2021.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2021.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005465 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 95.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.672 seconds
+Domain Reload Profiling:
+	ReloadAssembly (672ms)
+		BeginReloadAssembly (81ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (473ms)
+			LoadAssemblies (78ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (104ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (283ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (96ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (126ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.013758 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.189 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1190ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (938ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (321ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (418ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (57.0 KB). Loaded Objects now: 4636.
+Memory consumption went from 142.4 MB to 142.4 MB.
+Total: 5.373200 ms (FindLiveObjects: 0.604400 ms CreateObjectMapping: 0.426600 ms MarkObjects: 4.218500 ms  DeleteObjects: 0.122100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 501621.349221 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue4.png
+  artifactKey: Guid(6674fe7e0b361b14cb8722ca30fd202b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue4.png using Guid(6674fe7e0b361b14cb8722ca30fd202b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d83f9f1b50e6cc5669257adf402733') in 0.159539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue10.png
+  artifactKey: Guid(dabe9ed504ec9454fad5bea66ae65c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue10.png using Guid(dabe9ed504ec9454fad5bea66ae65c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2e95f0934a02acb32326bfd74040aa3') in 0.040583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.992038 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue16.png
+  artifactKey: Guid(408d2e9b597787440bb26f89d7a7f916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue16.png using Guid(408d2e9b597787440bb26f89d7a7f916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9711c0c79f6baa13a40c5ff8831ddd') in 0.034823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.018272 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue17.png
+  artifactKey: Guid(729c0e8249abec64983453220bb2ef77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue17.png using Guid(729c0e8249abec64983453220bb2ef77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df990d11e2be48bf8767fe24fc906375') in 0.032055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011938 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue19.png
+  artifactKey: Guid(cb1917a8a70aa0940b66e4251f0f71bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue19.png using Guid(cb1917a8a70aa0940b66e4251f0f71bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2699d9b47b3c77f156ecf3f5b4ad5049') in 0.035427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue23.png
+  artifactKey: Guid(9b4bd63ec4d02a64ea28d9824ff69b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue23.png using Guid(9b4bd63ec4d02a64ea28d9824ff69b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24cd2369fbdcf4e8fedfb4a41dff513a') in 0.033686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue26.png
+  artifactKey: Guid(9671bbab234ef144191f9b427296b396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue26.png using Guid(9671bbab234ef144191f9b427296b396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a3187e084b3611b87ac44b316741e35') in 0.037135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue30.png
+  artifactKey: Guid(8adb670fcea66c24aacdee0182ee1bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue30.png using Guid(8adb670fcea66c24aacdee0182ee1bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23bc271a7e69110cdfdda900a6051939') in 0.037967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015672 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue33.png
+  artifactKey: Guid(2c63e79a99d04d34f9e179d78b784829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue33.png using Guid(2c63e79a99d04d34f9e179d78b784829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86776b75938c053e78830877189d0cbd') in 0.036510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014846 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue36.png
+  artifactKey: Guid(4d1d0fa1281d1b744bc00db5faa1c56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue36.png using Guid(4d1d0fa1281d1b744bc00db5faa1c56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2b182ebb859988de916ba1b39354f36') in 0.035720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue39.png
+  artifactKey: Guid(9a4d144ee9f4ce149bc2941ad8374c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue39.png using Guid(9a4d144ee9f4ce149bc2941ad8374c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2a889022cd85347677d744163244606') in 0.032463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue40.png
+  artifactKey: Guid(45899ca76f3feb14b81e3efb062f4ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue40.png using Guid(45899ca76f3feb14b81e3efb062f4ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7bd8c6f115525eec7e5712fa4328b2') in 0.034195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.130286 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue42.png
+  artifactKey: Guid(71d43ab329d85a640929062ba7af9842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue42.png using Guid(71d43ab329d85a640929062ba7af9842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593f1d943819b2a27b0bf4a4db6f4de4') in 0.037470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011881 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue43.png
+  artifactKey: Guid(5be051cc9c7521f4a8b7844727ab4776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue43.png using Guid(5be051cc9c7521f4a8b7844727ab4776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1de9027ea00e912aba3f753eaf9bc67') in 0.032070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.026718 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue46.png
+  artifactKey: Guid(b759e633a6704984197ebd7cbc81bd0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue46.png using Guid(b759e633a6704984197ebd7cbc81bd0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaddc9f9130e15e204859efa79ee5209') in 0.033846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025293 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue48.png
+  artifactKey: Guid(f88241e77cc68a241999656488fa6fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue48.png using Guid(f88241e77cc68a241999656488fa6fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5bdd12212e8e069bc4ff4981c848e26') in 0.031146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015207 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue49.png
+  artifactKey: Guid(e74409bd37f130443b779958a0355161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue49.png using Guid(e74409bd37f130443b779958a0355161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14ec5099a0412c5c56aac0117dd6d4d1') in 0.030679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.069456 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue50.png
+  artifactKey: Guid(55c321b1f6a79b04ebd08df59049cfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue50.png using Guid(55c321b1f6a79b04ebd08df59049cfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2788fa04f72c3da07b8d9210722293e3') in 0.031140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.981784 seconds.
+  path: Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue3.png
+  artifactKey: Guid(b192fa2f1c9477a43b58f52d4b1cac37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/StoneUI/Buttons_512x512/Rock_Blue/button_rock_blue3.png using Guid(b192fa2f1c9477a43b58f52d4b1cac37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94c21a25561c01629a4de89d150e8718') in 0.033212 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
