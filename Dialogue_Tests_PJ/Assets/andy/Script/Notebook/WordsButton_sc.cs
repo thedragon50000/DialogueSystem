@@ -8,6 +8,7 @@ using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class WordsButton_sc : MonoBehaviour
 {
@@ -74,6 +75,7 @@ public class WordsButton_sc : MonoBehaviour
 
     private void ShowText(bool b)
     {
+        
         bool bTemp = b;
         ImgInitialize(iIndex, bTemp);
         isUsing.Value = !b;

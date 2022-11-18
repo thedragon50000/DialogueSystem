@@ -5,7 +5,8 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using Zenject;
 
-public class Without_MonoBehavier : IInitializable, ITickable
+// public class Without_MonoBehavier : IInitializable, ITickable
+public class Without_MonoBehavier : ITickable
 {
     public int i = 222;
 
@@ -14,12 +15,12 @@ public class Without_MonoBehavier : IInitializable, ITickable
         Debug.Log($"call Show({i})");
     }
 
-    [Inject]
-    public void Initialize()
-    {
-        MonoBehaviour.print("Without_MonoBehavier Initialize in Start()");
-        i = 333;
-    }
+    // [Inject]
+    // public void Initialize()
+    // {
+    //     MonoBehaviour.print("Without_MonoBehavier Initialize in Start()");
+    //     i = 333;
+    // }
 
     public void Tick()
     {

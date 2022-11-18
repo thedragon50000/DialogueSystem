@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class ImageList_sc : MonoBehaviour
 {
     public WordImage_sc[] arrayImg;
     public int iIndex;
+    [Inject] private StringManager_sc stringManager;
 
     private void Awake()
     {
@@ -25,11 +27,13 @@ public class ImageList_sc : MonoBehaviour
     {
         arrayImg[i].gameObject.SetActive(true);
         arrayImg[i].ImageInit();
+        E_WordPuzzleObj eTemp = (E_WordPuzzleObj) i;
+        stringManager.strAnswer.Value += eTemp.ToString();
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -41,6 +45,5 @@ public class ImageList_sc : MonoBehaviour
     {
         arrayImg[i].ImageDisapaer();
         arrayImg[i].gameObject.SetActive(false);
-
     }
 }
