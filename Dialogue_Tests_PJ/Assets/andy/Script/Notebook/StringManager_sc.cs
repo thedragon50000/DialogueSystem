@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
@@ -11,6 +12,10 @@ public class StringManager_sc : MonoBehaviour
 {
     // private string strAnswer = "";
     public StringReactiveProperty strAnswer;
+    public TMP_Text instantText;
+    [Inject] private StringManager_sc stringManager;
+
+    
 
 
     public void Start()
@@ -37,11 +42,12 @@ public class StringManager_sc : MonoBehaviour
     private void CheckAnswer(string obj)
     {
         string check = obj;
-        string answer0 = E_WordPuzzleObj.A.ToString() + E_WordPuzzleObj.B + E_WordPuzzleObj.C; //ABC
+        instantText.text = check;
+        string answer0 = E_WordPuzzleObj.我.ToString() + E_WordPuzzleObj.喜歡 + E_WordPuzzleObj.USER; //ABC
 
-        if (check.Contains(answer0))
+        if (check.Equals(answer0))
         {
-            print("ABC triggered");
+            print("對答案 triggered");
         }
     }
 }

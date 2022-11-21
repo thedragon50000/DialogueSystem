@@ -31,9 +31,9 @@ public class WordImage_sc : MonoBehaviour
 
 public enum E_WordPuzzleObj
 {
-    A,
-    B,
-    C,
+    我,
+    喜歡,
+    USER,
     D,
     E,
 }
