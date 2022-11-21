@@ -17,14 +17,16 @@ public class WordsButton_sc : MonoBehaviour
     public BoolReactiveProperty isNotUsedYet; //是否已經用掉了
     public BoolReactiveProperty isUsing; //正在使用中，但還沒用掉
 
-    public ImageList_sc imageList;
+    // public ImageList_sc imageList;
 
     public int iIndex; //對應底下圖片編號用
     TMP_Text _text; //文字的圖片
+    [Inject] private StringManager_sc stringManager;
+
 
     private void Awake()
     {
-        imageList = FindObjectOfType<ImageList_sc>();
+        // imageList = FindObjectOfType<ImageList_sc>();
         btn = gameObject.GetComponent<Button>();
         _text = GetComponentInChildren<TMP_Text>();
         isNotUsedYet.Value = true;
@@ -54,6 +56,9 @@ public class WordsButton_sc : MonoBehaviour
         if (!temp)
         {
             _text.color = Color.black;
+            E_WordPuzzleObj eTemp = (E_WordPuzzleObj) iIndex;
+            string strTemp = eTemp.ToString();
+            stringManager.strAnswer.Value.Trim(strTemp.ToCharArray());
         }
     }
 
@@ -75,9 +80,25 @@ public class WordsButton_sc : MonoBehaviour
 
     private void ShowText(bool b)
     {
-        
         bool bTemp = b;
-        ImgInitialize(iIndex, bTemp);
+
+        E_WordPuzzleObj eTemp = (E_WordPuzzleObj) iIndex;
+        string s = eTemp.ToString();
+        print("s:" + s);
+        if (!b)
+        {
+            stringManager.strAnswer.Value += s;
+        }
+        else
+        {
+            int i = stringManager.strAnswer.Value.IndexOf(s);
+            int iLength = s.Length;
+            string temp =
+                stringManager.strAnswer.Value.Remove(i, iLength);
+            stringManager.strAnswer.Value = temp;
+        }
+
+        // ImgInitialize(iIndex, bTemp);
         isUsing.Value = !b;
     }
 
@@ -85,11 +106,11 @@ public class WordsButton_sc : MonoBehaviour
     {
         if (bTemp)
         {
-            imageList.ImageDisapearByIndex(i);
-            return;
+            // imageList.ImageDisapearByIndex(i);
+            // return;
         }
-        
-        imageList.ImageInitByIndex(i);
+
+        // imageList.ImageInitByIndex(i);
         //呼叫對應編號的圖片並插到最後面
         //關閉已經開啟的對應編號圖片
     }
