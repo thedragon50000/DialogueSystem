@@ -28,4 +28,15 @@ public class ButtonList_sc : MonoBehaviour
         arrayButton[index].GetComponentInChildren<TMP_Text>().text = s;
         arrayButton[index].transform.SetAsLastSibling();
     }
+
+    public void ButtonHide(int i)
+    {
+        foreach (var button in arrayButton)
+        {
+            if (button.GetComponent<WordsButton_sc>().iIndex == i)
+            {
+                button.gameObject.SetActive(false);
+            }
+        }
+    }
 }

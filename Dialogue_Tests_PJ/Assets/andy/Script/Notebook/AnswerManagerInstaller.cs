@@ -4,12 +4,15 @@ using Zenject;
 
 public class AnswerManagerInstaller : MonoInstaller
 {
-    public StringManager_sc _stringManagerSc;
+    public StringManager_sc stringManagerSc;
+    public ButtonList_sc buttonListSc;
 
     public override void InstallBindings()
     {
         // Container.Bind<StringManager_sc>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
-        Container.BindInstance(_stringManagerSc).AsSingle();
+        Container.BindInstance(stringManagerSc).AsSingle();
+        Container.BindInstance(buttonListSc).AsSingle();
+        
     }
 
 }

@@ -34,6 +34,7 @@ public enum E_WordPuzzleObj
     我,
     喜歡,
     USER,
-    D,
+    A,
+    C,
     E,
 }

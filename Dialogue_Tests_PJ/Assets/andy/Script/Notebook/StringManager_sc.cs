@@ -13,9 +13,9 @@ public class StringManager_sc : MonoBehaviour
     // private string strAnswer = "";
     public StringReactiveProperty strAnswer;
     public TMP_Text instantText;
-    [Inject] private StringManager_sc stringManager;
 
-    
+    [Inject] private StringManager_sc _stringManager;
+    [Inject] private ButtonList_sc _buttonListSc;
 
 
     public void Start()
@@ -48,6 +48,17 @@ public class StringManager_sc : MonoBehaviour
         if (check.Equals(answer0))
         {
             print("對答案 triggered");
+            int i = (int) E_WordPuzzleObj.我;
+            RightAnswerCloseButton(i);
+            i = (int) E_WordPuzzleObj.喜歡;
+            RightAnswerCloseButton(i);
+            i = (int) E_WordPuzzleObj.USER;
+            RightAnswerCloseButton(i);
         }
+    }
+
+    private void RightAnswerCloseButton(int iButtonIndex)
+    {
+        _buttonListSc.ButtonHide(iButtonIndex);
     }
 }

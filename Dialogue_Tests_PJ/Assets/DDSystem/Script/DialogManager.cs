@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 using Zenject;
 
 namespace Doublsb.Dialog
 {
     public class DialogManager : MonoBehaviour
     {
-        [Inject] private AudioManager audio;
+        [Inject] AudioManager audio; //不裝Zenject就用public之後在Unity拖拉
+
         //================================================
         //Public Variable
         //================================================
         [Header("Game Objects")] public GameObject Printer;
         public GameObject Characters;
 
-        [Header("UI Objects")] public Text Printer_Text;
+        [Header("UI Objects")] public TMP_Text Printer_Text;
 
         [Header("Audio Objects")] public AudioSource SEAudio;
         // public AudioSource CallAudio;    //Audio合併後不需要這個
@@ -25,7 +27,7 @@ namespace Doublsb.Dialog
 
         [Header("Selector")] public GameObject Selector;
         public GameObject SelectorItem;
-        public Text SelectorItemText;
+        public TMP_Text SelectorItemText;
 
         [HideInInspector] public E_State eState;
 
@@ -147,7 +149,7 @@ namespace Doublsb.Dialog
             if (_current_Character != null)
             {
                 // 理想狀態是決定好聲音並用Enum分類，而非這樣全用字串找
-                
+
                 // var FindSE
                 //     = Array.Find(_current_Character.CallSE, (SE) => SE.name == SEname);
                 //
