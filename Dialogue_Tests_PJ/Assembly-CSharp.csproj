@@ -72,6 +72,7 @@
      <Compile Include="Assets\Andy\Script\ClickableObject\baseOnClick.cs" />
      <Compile Include="Assets\DDSystem\Script\EmotionDrawer.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
+     <Compile Include="Assets\Andy\Resources\TestInstaller.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models\Textures" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Green" />
@@ -155,6 +156,7 @@
      <Folder Include="Assets\UI\StoneUI\Buttons_256x256" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Yellow" />
+     <Folder Include="Assets\Andy\Resources" />
      <Folder Include="Assets\Andy\Script\Notebook" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Red" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512" />
