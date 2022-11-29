@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using UniRx;
 using Zenject;
 
 namespace Doublsb.Dialog
@@ -63,6 +64,21 @@ namespace Doublsb.Dialog
         //Public Method
         //================================================
 
+        private void Start()
+        {
+            print("DialogManager Start()");
+            eState = E_State.Deactivate;
+            // 20221106 HowWang Add, UniRx is required.
+            Observable.EveryUpdate().Subscribe(_ =>
+            {
+                if (Input.GetMouseButtonUp(0))
+                {
+                    print("mouse click");
+                    Click_Window();
+                }
+            });
+        }
+        
         #region Show & Hide
 
         public void Show(DialogData Data)

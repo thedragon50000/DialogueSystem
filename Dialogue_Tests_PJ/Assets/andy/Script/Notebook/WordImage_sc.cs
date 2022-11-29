@@ -36,5 +36,5 @@ public enum E_WordPuzzleObj
     USER,
     A,
     C,
-    E,
+    G,
 }
