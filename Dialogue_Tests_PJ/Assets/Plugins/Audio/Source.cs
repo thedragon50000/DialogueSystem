@@ -57,6 +57,8 @@ namespace baseSys.Audio.Sources {
             [Range(-3, 1)]
             public float Min = 1;            
         }
+        
+        
 
         public string Name;
         public AudioClip[] Clip;
