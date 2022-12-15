@@ -76,93 +76,166 @@
      <Compile Include="Assets\DDSystem\Script\EmotionDrawer.cs" />
      <Compile Include="Assets\Puzzle_Game\Scripts\DragAndDrop_.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models\Textures" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Green" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Black" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\Sound fx\Mixer" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Magic Dark" />
      <Folder Include="Assets\Demigiant" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\Andy\Texts" />
      <Folder Include="Assets\Puzzle_Game\Sprites" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Electric" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Grey" />
+     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Ice" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Mp3" />
      <Folder Include="Assets\DDSystem\Demo\Sound" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Misc" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Electric" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Blue" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Environment" />
      <Folder Include="Assets\Demigiant\DemiLib" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
      <Folder Include="Assets\Andy\Script\TestScene" />
      <Folder Include="Assets\Sound fx\mai_free_voices" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Misc" />
      <Folder Include="Assets\DDSystem" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Red" />
+     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\CartoonFX Free.txt" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Fire" />
      <Folder Include="Assets\_Music\CasualGameBGM05" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Light" />
      <Folder Include="Assets\Puzzle_Game\Scripts" />
      <Folder Include="Assets\DDSystem\Demo\Graphic\TMP_fonts\fonts" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Electric" />
      <Folder Include="Assets\DDSystem\Demo\Graphic\Materials" />
      <Folder Include="Assets\Demigiant\DemiLib\Core" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Nature" />
      <Folder Include="Assets\Andy\Scenes" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Mp3\Loop 2" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Andy\Texts\Excel_Dialogue_test.txt" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\DDSystem\Sound" />
      <Folder Include="Assets\Andy\Chapter1\Resources" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
      <Folder Include="Assets\Sound fx\Free Pack" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Andy\Chapter1" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Magic" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX Prefabs" />
      <Folder Include="Assets\Puzzle_Game\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Sound fx\mai_free_voices\mai_free_voices.txt" />
      <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Fire" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\DDSystem\Script" />
      <Folder Include="Assets\UI\2D Casual UI\Original Artwork" />
      <Folder Include="Assets\Andy\Script\ClickableObject" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Yellow" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Fire" />
      <Folder Include="Assets\UI\StoneUI" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Light" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions" />
      <Folder Include="Assets\Andy\Script\TestScene\Zenject" />
      <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits" />
      <None Include="Assets\_Music\CasualGameBGM05\ReadMe.txt" />
      <Folder Include="Assets\Andy\Chapter1\Resources\prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Ogg" />
      <Folder Include="Assets\Andy\Script" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Animated" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire" />
      <None Include="Assets\Andy\Texts\test_dong.txt" />
      <Folder Include="Assets\TextMesh Pro" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Magic Misc" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Purple" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Light" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Misc" />
      <None Include="Assets\DDSystem\Graphic\NANUM_LICENSE.txt" />
      <Folder Include="Assets\Andy\Chapter1\Scripts" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Ogg\Loop 2" />
      <Folder Include="Assets\Andy\Chapter1\Scenes" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Plain" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Stretched" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Blood" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Blue" />
+     <Folder Include="Assets\JMO Assets" />
      <Folder Include="Assets\Demigiant\DOTween" />
      <Folder Include="Assets\UI\2D Casual UI\Sprite" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\DDSystem\Prefab" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Eerie" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Magic Misc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster FREE.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Light" />
+     <Folder Include="Assets\_Music\The Intergalactic Beets Project - Full-Length Song Collection I" />
      <Folder Include="Assets\Puzzle_Game" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Texts" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Skull &amp; Ghosts Effects" />
      <Folder Include="Assets\Demigiant\DOTweenPro" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Readme.txt" />
      <Folder Include="Assets\UI\StoneUI\Buttons_128x128" />
      <Folder Include="Assets\UI\StoneUI\OrherUI_4-2K" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_white" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Misc" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Mesh" />
      <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
      <Folder Include="Assets\UI" />
      <Folder Include="Assets\Audio\SFX" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\UI Canvas" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Ogg\Loop 1" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Ice" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Andy\Script\TestScene\Zenject\gameObject" />
@@ -174,39 +247,68 @@
      <Folder Include="Assets\UI\StoneUI\Buttons_256x256" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials" />
+     <Folder Include="Assets\_Music\Noire Underground wav\wav" />
+     <None Include="Assets\_Music\Fantasy SFX for Particle Distort Texture effect library\readme_Fantasy SFX for Particle Distort Texture effect library.txt" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Yellow" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
      <Folder Include="Assets\Andy\Resources" />
      <Folder Include="Assets\Andy\Script\Notebook" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Red" />
+     <Folder Include="Assets\_Music\Fantasy SFX for Particle Distort Texture effect library" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512" />
+     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\_Music\Music" />
      <Folder Include="Assets\Sound fx" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Water" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Fire" />
+     <Folder Include="Assets\_Music\Noire Underground wav" />
      <Folder Include="Assets\_Music" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Electric" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Symbols" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Violet" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Gray" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <Folder Include="Assets\_Music\Rik4kProductions - EDM Loops FREE\Mp3\Loop 1" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Water" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Pickup Items" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
      <Folder Include="Assets\Andy\Script\Data" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Water" />
      <Folder Include="Assets\Audio" />
      <Folder Include="Assets\DDSystem\Demo\Graphic" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Impacts" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Debris Hits" />
      <Folder Include="Assets\DDSystem\Graphic" />
      <Folder Include="Assets\DDSystem\Demo\Graphic\TMP_fonts" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Blood" />
      <Folder Include="Assets\Audio\BGM" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Graphics" />
      <Folder Include="Assets\DDSystem\Demo\Scripts" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Textures" />
      <Folder Include="Assets\DDSystem\Demo" />
      <Folder Include="Assets\UI\StoneUI\OtherUI_2-1K" />
      <Folder Include="Assets\Andy\Script\ReadTxt" />
      <Folder Include="Assets\UI\2D Casual UI" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\Sound fx\mai_free_voices\mp3" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\Materials\Electric" />
+     <Folder Include="Assets\_Music\Night Drive" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+     <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
      <Folder Include="Assets\UI\StoneUI\OtherUI_4k+" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Explosions" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity 2021.3.12f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -971,6 +1073,30 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{d37b4955-1915-2184-2a4f-ace868ec57c1}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{7fff4a77-eebd-b09c-a7ef-1584ad7d0f80}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{207319dc-8fa0-dcbc-b584-da1cb5087614}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{1977aac8-c3a7-ba2c-38e5-67a474e5f4d9}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{dbe71a0b-a713-114d-9182-bd81547ba505}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{7d1d0826-1263-fccb-e06b-3f989c5d3f6c}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{0c77be01-182c-b9fa-4b9a-6bf0f45c145d}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
