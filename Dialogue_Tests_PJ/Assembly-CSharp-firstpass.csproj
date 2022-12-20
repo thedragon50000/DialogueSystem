@@ -745,11 +745,11 @@
      <Reference Include="UnityEditor.UI">
      <HintPath>D:\My Works\Unity_Homeworks\3.My PJ\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>D:\My Works\Unity_Homeworks\3.My PJ\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>D:\My Works\Unity_Homeworks\3.My PJ\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>D:\My Works\Unity_Homeworks\3.My PJ\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>D:\My Works\Unity_Homeworks\3.My PJ\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
@@ -790,9 +790,25 @@
       <Project>{7b755594-5a0d-3235-8fd9-4b25df5bf4cd}</Project>
       <Name>NewAssembly</Name>
     </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{7fff4a77-eebd-b09c-a7ef-1584ad7d0f80}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{7d1d0826-1263-fccb-e06b-3f989c5d3f6c}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{207319dc-8fa0-dcbc-b584-da1cb5087614}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{1a276e01-bee5-95bc-9582-6422f06de42a}</Project>
       <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{0c77be01-182c-b9fa-4b9a-6bf0f45c145d}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{d77c5a38-3b0c-9032-a792-0df7191a434a}</Project>
@@ -810,29 +826,13 @@
       <Project>{d37b4955-1915-2184-2a4f-ace868ec57c1}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{dbe71a0b-a713-114d-9182-bd81547ba505}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{207319dc-8fa0-dcbc-b584-da1cb5087614}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{7fff4a77-eebd-b09c-a7ef-1584ad7d0f80}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{0c77be01-182c-b9fa-4b9a-6bf0f45c145d}</Project>
-      <Name>CFXRDemo</Name>
-    </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{7d1d0826-1263-fccb-e06b-3f989c5d3f6c}</Project>
-      <Name>KinoBloom.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{1977aac8-c3a7-ba2c-38e5-67a474e5f4d9}</Project>
       <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{dbe71a0b-a713-114d-9182-bd81547ba505}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
