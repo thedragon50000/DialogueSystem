@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f526593f46769794f90ab9413cef348a, type: 3}
   m_Name: PuzzleLevel
   m_EditorClassIdentifier: 
+  iLevel: 5

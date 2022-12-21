@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UniRx;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -11,7 +12,24 @@ using Zenject;
 
 public class PuzzleManager_sc : MonoBehaviour
 {
-    private int iLevel;
+    [Inject(Id = "Level")] private int iLevel;
+
+    int i
+    {
+        get => iLevel;
+        set
+        {
+            iLevel = value;
+            if (i >= Levels.Length)
+            {
+                value = 0;
+                i = value;
+                // i = 0;
+            }
+        }
+    }
+
+    [Inject] private ZenjectSceneLoader _sceneLoader;
     public Sprite[] Levels;
 
     public GameObject EndMenu;
@@ -19,7 +37,6 @@ public class PuzzleManager_sc : MonoBehaviour
 
     private void Awake()
     {
-        // iLevel = _puzzleLevel.iLevel;
     }
 
     void Start()
@@ -28,12 +45,12 @@ public class PuzzleManager_sc : MonoBehaviour
         iPlacedPieces.Subscribe(CheckProgression, Error, OnCompleted);
 
         var pieces = GetComponentsInChildren<piecesScript>();
-        print("是null嗎?" + pieces == null);
+        // print("是null嗎?" + pieces == null);
         foreach (var p in pieces)
         {
             //todo:換圖片，用scriptableObject
             var spriteRenderer = p.gameObject.GetComponentInChildren<SpriteRenderer>();
-            spriteRenderer.sprite = Levels[PlayerPrefs.GetInt("Level")];
+            spriteRenderer.sprite = Levels[iLevel];
         }
     }
 
@@ -59,12 +76,14 @@ public class PuzzleManager_sc : MonoBehaviour
 
     public void NextLevel()
     {
-        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-        SceneManager.LoadScene("Game");
+        var s = E_ZenjectID.Level.ToString();
+        i = iLevel + 1;
+        print(i);
+        _sceneLoader.LoadScene(1, LoadSceneMode.Single, container => container.BindInstance(i).WithId(s));
     }
 
     public void BacktoMenu()
     {
-        SceneManager.LoadScene("Menu");
+        _sceneLoader.LoadScene(0);
     }
 }
