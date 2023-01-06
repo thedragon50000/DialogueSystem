@@ -34,10 +34,7 @@ public class PuzzleManager_sc : MonoBehaviour
 
     public GameObject EndMenu;
     public IntReactiveProperty iPlacedPieces;
-
-    private void Awake()
-    {
-    }
+    
 
     void Start()
     {
