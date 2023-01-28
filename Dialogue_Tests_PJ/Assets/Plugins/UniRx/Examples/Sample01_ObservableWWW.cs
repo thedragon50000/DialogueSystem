@@ -25,12 +25,10 @@ namespace UniRx.Examples
             // download after google, start bing download
             {
                 var query = from google in ObservableWWW.Get("http://google.com/")
-                    from bing in ObservableWWW.Get("http://bing.com/")
-                    select new {google, bing};
+                            from bing in ObservableWWW.Get("http://bing.com/")
+                            select new { google, bing };
 
-                var cancel =
-                    query.Subscribe(x => Debug.Log(x.google.Substring(0, 100)
-                                                   + ":" + x.bing.Substring(0, 100)));
+                var cancel = query.Subscribe(x => Debug.Log(x.google.Substring(0, 100) + ":" + x.bing.Substring(0, 100)));
 
                 // Call Dispose is cancel downloading.
                 cancel.Dispose();
@@ -74,7 +72,6 @@ namespace UniRx.Examples
                         {
                             Debug.Log(ex.StatusCode);
                         }
-
                         foreach (var item in ex.ResponseHeaders)
                         {
                             Debug.Log(item.Key + ":" + item.Value);

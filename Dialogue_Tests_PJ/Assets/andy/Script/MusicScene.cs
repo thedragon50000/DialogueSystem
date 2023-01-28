@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UniRx;
 using Unity.VisualScripting;
 using UnityEditor.PackageManager;
@@ -15,19 +16,46 @@ public class MusicScene : MonoBehaviour
 
     [SerializeField] AudioClip _clip = null;
     public AudioSource[] audioSources;
-    public AudioSource NowPlaying;
+
+    public TMP_Text textNowPlaying;
+
+    // public string strmyClass.NowPlaying;
+    public StringReactiveProperty strNowPlaying;
+
+    public MyClass myClass;
+
+    // public AudioSource NowPlaying;
+
+    [Serializable]
+    public class MyClass
+    {
+        public AudioSource NowPlaying;
+    }
 
     // Start is called before the first frame update
     private void Awake()
     {
         audioSources = Musicbase.GetComponentsInChildren<AudioSource>();
+        myClass = new();
     }
 
     void Start()
     {
-        NowPlaying = audioSources[0];
-        _clip = NowPlaying.clip;
-        NowPlaying.Play();
+        myClass.ObserveEveryValueChanged(m => m.NowPlaying).Subscribe(_ =>
+        {
+            if (myClass.NowPlaying.IsUnityNull()) return;
+            print("audio change.");
+            strNowPlaying.Value = myClass.NowPlaying.name;
+        });
+
+        strNowPlaying.Subscribe(_ =>
+        {
+            textNowPlaying.text = strNowPlaying.Value;
+        });
+        
+        myClass.NowPlaying = audioSources[0];
+        _clip = myClass.NowPlaying.clip;
+        myClass.NowPlaying.Play();
         iIndex.Subscribe(ChangeMusic, Error, OnCompleted);
         _iLength = audioSources.Length;
 
@@ -35,30 +63,30 @@ public class MusicScene : MonoBehaviour
         observableGetKeyUp.Buffer(observableGetKeyUp.Throttle(TimeSpan.FromSeconds(.3f)).Where(s => s > 1)).Subscribe(
             _ =>
             {
-                NowPlaying.Stop();
+                myClass.NowPlaying.Stop();
                 print("Right.");
                 iIndex.Value++;
                 var i = iIndex.Value;
-                
-                NowPlaying = audioSources[i];
+
+                myClass.NowPlaying = audioSources[i];
                 _clip = audioSources[i].clip;
-                
-                NowPlaying.Play();
+
+                myClass.NowPlaying.Play();
             });
         var observableGetKeyUp2 = Observable.EveryUpdate().Where(_ => Input.GetKeyUp(KeyCode.LeftArrow));
         observableGetKeyUp2.Buffer(observableGetKeyUp2.Throttle(TimeSpan.FromSeconds(.3f)).Where(s => s > 1)).Subscribe(
             _ =>
             {
-                NowPlaying.Stop();
+                myClass.NowPlaying.Stop();
                 print("Left.");
                 audioSources[iIndex.Value].Stop();
                 iIndex.Value--;
                 var i = iIndex.Value;
 
-                NowPlaying = audioSources[i];
+                myClass.NowPlaying = audioSources[i];
                 _clip = audioSources[i].clip;
-                
-                NowPlaying.Play();
+
+                myClass.NowPlaying.Play();
             });
     }
 

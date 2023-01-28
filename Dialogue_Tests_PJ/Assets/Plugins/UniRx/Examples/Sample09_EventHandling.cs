@@ -27,17 +27,13 @@ namespace UniRx.Examples
         {
             // convert to IO<EventPattern> as (sender, eventArgs)
             Observable.FromEventPattern<EventHandler<MyEventArgs>, MyEventArgs>(
-                    h => h.Invoke, 
-                    h => FooBar += h,
-                    h => FooBar -= h)
+                    h => h.Invoke, h => FooBar += h, h => FooBar -= h)
                 .Subscribe()
                 .AddTo(disposables); // IDisposable can add to collection easily by AddTo
 
             // convert to IO<EventArgs>, many situation this is useful than FromEventPattern
             Observable.FromEvent<EventHandler<MyEventArgs>, MyEventArgs>(
-                    h => (sender, e)
-                        => h(e), h => FooBar += h,
-                    h => FooBar -= h)
+                    h => (sender, e) => h(e), h => FooBar += h, h => FooBar -= h)
                 .Subscribe()
                 .AddTo(disposables);
 
