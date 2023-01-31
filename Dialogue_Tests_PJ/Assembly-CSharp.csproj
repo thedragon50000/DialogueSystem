@@ -105,7 +105,8 @@
      <Compile Include="Assets\Real-Time Procedural Cable Simple\Scripts\CableProceduralStatic.cs" />
      <Compile Include="Assets\Real-Time Procedural Cable Simple\Scripts\CableProceduralCurve.cs" />
      <Compile Include="Assets\Real-Time Procedural Cable Simple\Scripts\CableProceduralMultipoint.cs" />
-     <Compile Include="Assets\2Dto3D\OnTriggerStay_sc.cs" />
+     <Compile Include="Assets\2Dto3D\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Pure Poly\Free Low Poly Nature Pack\Scenes\Cinematic_sc.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models\Textures" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Green" />
