@@ -13,12 +13,14 @@ public class Cinematic_sc : MonoBehaviour
 
     private void Awake()
     {
-        Tweener tweener;
         Vector3 forward = transform.position + Vector3.back * 40;
-        _sequence = transform.DOJump(forward, 1, 10, 10);
-        _sequence.Pause();
+
+        _sequence = DOTween.Sequence();
+
+        var doJump = transform.DOJump(forward, 1, 10, 10).Pause();
         _sequence.SetAutoKill(true);
-        // _sequence.Append(tweener).Insert()
+        var doRotate = transform.DORotate(transform.rotation.eulerAngles+Vector3.back, 5);
+        _sequence.Append(doJump).Join(doRotate);
     }
 
     void Start()

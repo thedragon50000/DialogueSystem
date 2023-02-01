@@ -152,6 +152,7 @@
      <Folder Include="Assets\_Particle\Particle Attractor by Moonflower Carnivore\Textures" />
      <None Include="Assets\_Particle\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
      <Folder Include="Assets\_Particle\PowerUp\Sounds" />
+     <Folder Include="Assets\2Dto3D\genjyuugothic-20150607" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Scripts" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Misc" />
@@ -297,6 +298,7 @@
      <Folder Include="Assets\UI\StoneUI\Buttons_128x128" />
      <Folder Include="Assets\UI\StoneUI\OrherUI_4-2K" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_white" />
+     <Folder Include="Assets\2Dto3D\genjyuugothic-20150607\mplus-TESTFLIGHT-059" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Misc" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Mesh" />
