@@ -908,6 +908,14 @@
       <Project>{9b4d8747-7c17-8477-71c1-00aea1b37ea7}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityPlayModeSaverEditor.csproj">
+      <Project>{777f5f57-920b-21b8-3579-da6922c6ba83}</Project>
+      <Name>UnityPlayModeSaverEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityPlayModeSaver.csproj">
+      <Project>{6b7bb16b-c5ef-d454-a43c-48683516cadb}</Project>
+      <Name>UnityPlayModeSaver</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -107,6 +107,7 @@
      <Compile Include="Assets\Real-Time Procedural Cable Simple\Scripts\CableProceduralMultipoint.cs" />
      <Compile Include="Assets\2Dto3D\NewBehaviourScript.cs" />
      <Compile Include="Assets\Pure Poly\Free Low Poly Nature Pack\Scenes\Cinematic_sc.cs" />
+     <Compile Include="Assets\Andy\Script\Notebook\TestBuildButton.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models\Textures" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Green" />
@@ -210,6 +211,7 @@
      <Folder Include="Assets\UI\2D Casual UI\Original Artwork" />
      <Folder Include="Assets\_Particle\PowerUp\Scripts" />
      <Folder Include="Assets\_Particle\Particle Attractor by Moonflower Carnivore\Prefabs" />
+     <Folder Include="Assets\ThirdParty" />
      <Folder Include="Assets\Christmas Scene\Assets\Scene" />
      <Folder Include="Assets\Andy\Script\ClickableObject" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Yellow" />
@@ -298,7 +300,6 @@
      <Folder Include="Assets\UI\StoneUI\Buttons_128x128" />
      <Folder Include="Assets\UI\StoneUI\OrherUI_4-2K" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_white" />
-     <Folder Include="Assets\2Dto3D\genjyuugothic-20150607\mplus-TESTFLIGHT-059" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Misc" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Mesh" />
@@ -1216,6 +1217,14 @@
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{9b4d8747-7c17-8477-71c1-00aea1b37ea7}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityPlayModeSaverEditor.csproj">
+      <Project>{777f5f57-920b-21b8-3579-da6922c6ba83}</Project>
+      <Name>UnityPlayModeSaverEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityPlayModeSaver.csproj">
+      <Project>{6b7bb16b-c5ef-d454-a43c-48683516cadb}</Project>
+      <Name>UnityPlayModeSaver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
