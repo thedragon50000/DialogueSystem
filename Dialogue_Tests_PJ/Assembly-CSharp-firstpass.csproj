@@ -786,6 +786,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityPlayModeSaverEditor.csproj">
+      <Project>{777f5f57-920b-21b8-3579-da6922c6ba83}</Project>
+      <Name>UnityPlayModeSaverEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{7fff4a77-eebd-b09c-a7ef-1584ad7d0f80}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
@@ -797,6 +801,10 @@
     <ProjectReference Include="CFXREditor.csproj">
       <Project>{207319dc-8fa0-dcbc-b584-da1cb5087614}</Project>
       <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{c730afed-7c07-f4b7-d52a-a2ba85a63bbd}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{1a276e01-bee5-95bc-9582-6422f06de42a}</Project>
@@ -810,9 +818,17 @@
       <Project>{d77c5a38-3b0c-9032-a792-0df7191a434a}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{2f81756f-747e-a964-314e-78113f0debaa}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UniRx.csproj">
       <Project>{1adaf7f6-47a5-4cc3-c89f-096a212046e4}</Project>
       <Name>UniRx</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{9b4d8747-7c17-8477-71c1-00aea1b37ea7}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{d8372daf-a565-f61a-d814-efa4731b3ec4}</Project>
@@ -829,22 +845,6 @@
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{dbe71a0b-a713-114d-9182-bd81547ba505}</Project>
       <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{2f81756f-747e-a964-314e-78113f0debaa}</Project>
-      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{c730afed-7c07-f4b7-d52a-a2ba85a63bbd}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{9b4d8747-7c17-8477-71c1-00aea1b37ea7}</Project>
-      <Name>Boxophobic.Utils.Scripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityPlayModeSaverEditor.csproj">
-      <Project>{777f5f57-920b-21b8-3579-da6922c6ba83}</Project>
-      <Name>UnityPlayModeSaverEditor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityPlayModeSaver.csproj">
       <Project>{6b7bb16b-c5ef-d454-a43c-48683516cadb}</Project>

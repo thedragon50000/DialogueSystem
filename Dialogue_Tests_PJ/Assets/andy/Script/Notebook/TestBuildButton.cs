@@ -40,22 +40,28 @@ public class TestBuildButton : MonoBehaviour
         {
             FindButtonByText_NotRepeating("小");
         }
+
+        FindButtonByText_NotRepeating("平板電腦");
     }
 
     void FindButtonByText_NotRepeating(string s)
     {
-        // Texts = 
-        foreach (var b in Buttons)
+        //  = 
+        foreach (char c in s)
         {
-            var bGameObject = b.gameObject;
-            if (bGameObject.name == s)
+            foreach (var t in Texts)
             {
-                if (bGameObject.activeSelf == false)
+                // var bGameObject = b.gameObject;
+                // if (t.text == s)
+                if (t.text == c.ToString())
                 {
-                    bGameObject.SetActive(true);
-                    break;
+                    var parentGameObject = t.transform.parent.gameObject;
+                    if (parentGameObject.activeSelf == false)
+                    {
+                        parentGameObject.SetActive(true);
+                        break;
+                    }
                 }
-                //todo:繼續搜尋
             }
         }
     }
