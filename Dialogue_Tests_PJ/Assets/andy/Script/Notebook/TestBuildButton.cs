@@ -11,7 +11,9 @@ public class TestBuildButton : MonoBehaviour
     public Char[] strAllLetters;
     public Button btnCrossWordsLetter;
     public TMP_Text[] Texts;
-    public Button[] Buttons;
+    public Button[] buttons;
+
+    
 
     // Start is called before the first frame update
     void Start()
