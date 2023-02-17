@@ -13,28 +13,55 @@ public class Cinematic_sc : MonoBehaviour
     private float _fDefaultCameraViewField;
     private Sequence _doSequence;
 
+    public Vector3[] v3Positions;
+    public GameObject[] goPositions;
+    public int iProgress;
+    public float fCameraX;
+
+    void ChangeSite()
+    {
+        if (iProgress < v3Positions.Length)
+        {
+            transform.DOLookAt(v3Positions[iProgress], .5f, AxisConstraint.W);
+            print("進度:" + iProgress);
+            iProgress++;
+        }
+        else
+        {
+            print("走到了盡頭");
+        }
+    }
+
     private void Awake()
     {
-        _fDefaultCameraViewField = Camera.main.fieldOfView;
-        Vector3 forward = transform.position + Vector3.back * 40;
+        fCameraX = transform.position.x;
+        for (int i = 0; i < 3; i++)
+        {
+            v3Positions[i] = goPositions[i].transform.position;
+        }
 
-        _sequence = DOTween.Sequence();
+        transform.DOPath(v3Positions, 10, PathType.CatmullRom, PathMode.Sidescroller2D).OnWaypointChange(_ => ChangeSite());
 
-        var doJump = transform.DOJump(forward, 1, 10, 10).Pause();
-        _sequence.SetAutoKill(true);
-        var doRotate = transform.DORotate(transform.rotation.eulerAngles+Vector3.back, 5);
-        _sequence.Append(doJump).Join(doRotate).Pause();
-
-        var tweenerZoom = DOTween.To(() =>
-                Camera.main.orthographicSize,
-            x => Camera.main.orthographicSize = x,
-            4f, 0).Pause();
-
-        var doRotateCamera = Camera.main.transform.DORotate(new Vector3(0, -200, 0), 1).Pause();
-        var doRotate2Right = Camera.main.transform.DORotate(new Vector3(0, -180, 0), 1).Pause();
-
-        _doSequence = DOTween.Sequence();
-        _doSequence.Append(tweenerZoom).Append(doRotateCamera).Append(doRotate2Right).Pause();
+        // _fDefaultCameraViewField = Camera.main.fieldOfView;
+        // Vector3 forward = transform.position + Vector3.back * 40;
+        //
+        // _sequence = DOTween.Sequence();
+        //
+        // var doJump = transform.DOJump(forward, 1, 10, 10).Pause();
+        // _sequence.SetAutoKill(true);
+        // var doRotate = transform.DORotate(transform.rotation.eulerAngles+Vector3.back, 5);
+        // _sequence.Append(doJump).Join(doRotate).Pause();
+        //
+        // var tweenerZoom = DOTween.To(() =>
+        //         Camera.main.orthographicSize,
+        //     x => Camera.main.orthographicSize = x,
+        //     4f, 0).Pause();
+        //
+        // var doRotateCamera = Camera.main.transform.DORotate(new Vector3(0, -200, 0), 1).Pause();
+        // var doRotate2Right = Camera.main.transform.DORotate(new Vector3(0, -180, 0), 1).Pause();
+        //
+        // _doSequence = DOTween.Sequence();
+        // _doSequence.Append(tweenerZoom).Append(doRotateCamera).Append(doRotate2Right).Pause();
     }
 
     void Start()
