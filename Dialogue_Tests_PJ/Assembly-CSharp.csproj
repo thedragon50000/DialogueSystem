@@ -41,8 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\2Dto3D\NewBehaviourScript.cs" />
+     <Compile Include="Assets\2Dto3D\Swing_sc.cs" />
      <Compile Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\Andy\Chapter1\Scripts\FindSameUnit_sc.cs" />
      <Compile Include="Assets\Puzzle_Game\Scripts\piecesScript.cs" />
      <Compile Include="Assets\_Particle\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSpherical.cs" />
      <Compile Include="Assets\Andy\Script\AudioManager.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Pure Poly\Real-Time Procedural Cable Simple\Scripts\CableProceduralStatic.cs" />
      <Compile Include="Assets\Andy\Script\KeyboardInstaller.cs" />
      <Compile Include="Assets\Andy\Script\DontDestroy_sc.cs" />
+     <Compile Include="Assets\2Dto3D\rotate_sc.cs" />
      <Compile Include="Assets\Andy\Script\TestScene\EventTest_sc.cs" />
      <Compile Include="Assets\Andy\Script\Notebook\AnswerManagerInstaller.cs" />
      <Compile Include="Assets\_Particle\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSelf.cs" />
@@ -103,6 +105,7 @@
      <Compile Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
      <Compile Include="Assets\Pure Poly\Real-Time Procedural Cable Simple\Scripts\CableProceduralSimple.cs" />
      <Compile Include="Assets\_Particle\Particle Attractor by Moonflower Carnivore\Scripts\rotation.cs" />
+     <Compile Include="Assets\2Dto3D\Punch_sc.cs" />
      <Compile Include="Assets\Puzzle_Game\Scripts\PuzzleManager_sc.cs" />
      <Compile Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
      <Compile Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
@@ -307,7 +310,6 @@
      <Folder Include="Assets\Andy\Script\TestScene\Zenject\gameObject" />
      <Folder Include="Assets\UI\StoneUI\Samples" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
-     <Folder Include="Assets\Andy\Chapter1\Scripts\Notebook" />
      <Folder Include="Assets\Andy" />
      <None Include="Assets\DDSystem\Demo\Graphic\TMP_fonts\fonts\All chars.txt" />
      <Folder Include="Assets\Pure Poly\Free Low Poly Nature Pack\Meshes" />

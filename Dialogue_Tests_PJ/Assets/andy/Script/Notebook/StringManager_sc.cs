@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
+using Unity.VisualScripting;
 using UnityEditor;
 using Zenject;
 
@@ -28,6 +29,7 @@ public class StringManager_sc : MonoBehaviour
     public void Start()
     {
         strAnswer.Subscribe(CheckAnswer, Error, Complete);
+        answerItem.transform.GetOrAddComponent<Rigidbody>();
     }
 
     [Inject]
