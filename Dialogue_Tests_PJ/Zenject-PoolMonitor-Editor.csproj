@@ -335,8 +335,11 @@
      <Reference Include="DOTweenEditor">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Assets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
-     <Reference Include="DemiEditor">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Unsafe">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
@@ -347,8 +350,20 @@
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
      </Reference>
+     <Reference Include="DemiEditor">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Pdb">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     </Reference>
      <Reference Include="log4netPlastic">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Assets\Demigiant\DOTween\DOTween.dll</HintPath>
@@ -358,6 +373,9 @@
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -379,24 +397,6 @@
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="clipper_library">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -782,11 +782,11 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.TestRunner">
-     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.TestRunner">
      <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TestRunner">
+     <HintPath>C:\Users\Andy\Desktop\DialogueSystem\Dialogue_Tests_PJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
