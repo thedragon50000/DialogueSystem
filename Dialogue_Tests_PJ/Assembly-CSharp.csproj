@@ -112,6 +112,16 @@
      <Compile Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
      <Compile Include="Assets\_Particle\PowerUp\Scripts\ScaleParticles.cs" />
      <Compile Include="Assets\Andy\Script\KeyboradControl.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets\IBullet.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets\Instantiate\SteelBullet_sc.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\SceneInstaller.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets\Instantiate\Fireball_sc.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets\BulletBase.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Factory\CustomBulletFactory.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Factory\BulletFactory.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets\GunType.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\GameController_sc.cs" />
+     <Compile Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Player_sc.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Andy\Chapter1\Resources\School Supplies\Models\Textures" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Green" />
@@ -259,6 +269,8 @@
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Blue" />
      <Folder Include="Assets\_Particle\JMO Assets" />
      <Folder Include="Assets\Demigiant\DOTween" />
+     <Folder Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts" />
+     <Folder Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Factory" />
      <Folder Include="Assets\UI\2D Casual UI\Sprite" />
      <Folder Include="Assets\2Dto3D\Materials" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
@@ -331,6 +343,7 @@
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Rock_Yellow" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
      <Folder Include="Assets\Lowpoly Nature &amp; Village Pack\3D Models" />
+     <Folder Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets" />
      <Folder Include="Assets\Andy\Resources" />
      <Folder Include="Assets\Andy\Script\Notebook" />
      <Folder Include="Assets\UI\StoneUI\Buttons_512x512\Moss_Red" />
@@ -391,6 +404,7 @@
      <Folder Include="Assets\UI\2D Casual UI" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\Sound fx\mai_free_voices\mp3" />
+     <Folder Include="Assets\_ZenjectLearning\ZenjectFactorySceneScripts\Bullets\Instantiate" />
      <Folder Include="Assets\_Particle\JMO Assets\Cartoon FX (legacy)\Materials\Electric" />
      <Folder Include="Assets\_Music\Night Drive" />
      <Folder Include="Assets\_Particle\PowerUp\Models" />
