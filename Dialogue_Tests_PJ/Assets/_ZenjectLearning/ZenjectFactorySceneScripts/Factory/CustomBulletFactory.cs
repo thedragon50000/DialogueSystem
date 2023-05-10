@@ -19,7 +19,7 @@ namespace _ZenjectLearning.ZenjectFactorySceneScripts.Factory
 
         public override IBullet Create()
         {
-            IBullet b = _gunType.eGunType == EGunType.FireMagic ? _fireFactory.Create() : _steelFactory.Create();
+            IBullet b = _gunType.EGunType == EGunType.FireMagic ? _fireFactory.Create() : _steelFactory.Create();
             
             return b;
         }

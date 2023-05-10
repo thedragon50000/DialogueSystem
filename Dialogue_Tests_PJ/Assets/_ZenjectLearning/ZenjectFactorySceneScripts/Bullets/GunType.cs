@@ -2,7 +2,7 @@
 {
     public class GunType
     {
-        public EGunType eGunType { get; set; }
+        public EGunType EGunType { get; set; }
     }
 
     public enum EGunType

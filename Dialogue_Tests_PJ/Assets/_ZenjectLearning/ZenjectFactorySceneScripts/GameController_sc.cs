@@ -12,8 +12,8 @@ namespace _ZenjectLearning.ZenjectFactorySceneScripts
 
         IBullet CreateBullet()
         {
-            EGunType type = _gunType.eGunType;
-            _gunType.eGunType = type == EGunType.Riffle ? EGunType.FireMagic : EGunType.Riffle;
+            EGunType type = _gunType.EGunType;
+            _gunType.EGunType = type == EGunType.Riffle ? EGunType.FireMagic : EGunType.Riffle;
 
             IBullet b = _customBulletFactory.Create();
             return b;

@@ -8,15 +8,18 @@ public class SceneInstaller : MonoInstaller
 {
     private DiContainer _diContainer;
     public Player_sc player;
-    
+    public SteelBullet_sc bulletSteel;
+    public Fireball_sc bulletFireball;
+
     public override void InstallBindings()
     {
-        _diContainer.Bind<GunType>().AsSingle();
-        _diContainer.Bind<GameController_sc>().FromNewComponentOnNewGameObject().AsSingle();
-        _diContainer.BindInstance(player);
-        
-        _diContainer.BindFactoryCustomInterface<IBullet, CustomBulletFactory, IBulletFactory>().FromFactory<CustomBulletFactory>();
-        _diContainer.BindFactory<SteelBullet_sc, SteelBullet_sc.Factory>().FromComponentInNewPrefabResource("");
-        _diContainer.BindFactory<Fireball_sc, Fireball_sc.Factory>().FromComponentInNewPrefabResource("");
+        Container.Bind<GunType>().AsSingle();
+        Container.Bind<GameController_sc>().FromNewComponentOnNewGameObject().AsSingle();
+        Container.BindInstance(player);
+
+        Container.BindFactoryCustomInterface<IBullet, CustomBulletFactory, IBulletFactory>()
+            .FromFactory<CustomBulletFactory>();
+        Container.BindFactory<SteelBullet_sc, SteelBullet_sc.Factory>().FromNewComponentOnNewPrefab(bulletSteel);
+        Container.BindFactory<Fireball_sc, Fireball_sc.Factory>().FromNewComponentOnNewPrefab(bulletFireball);
     }
 }
