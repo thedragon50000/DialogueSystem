@@ -17,6 +17,7 @@ namespace _ZenjectLearning.ZenjectFactorySceneScripts
         private void Move(Vector3 obj)
         {
             position.Value = obj;
+            gameObject.transform.position = position.Value;
         }
         
     }

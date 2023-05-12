@@ -15,5 +15,10 @@ namespace _ZenjectLearning.ZenjectFactorySceneScripts
         public class Factory : PlaceholderFactory<Fireball_sc>
         {
         }
+        
+        public class Pool : MemoryPool<Fireball_sc>
+        {
+            
+        }
     }
 }

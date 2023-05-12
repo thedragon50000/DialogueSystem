@@ -6,4 +6,5 @@ namespace _ZenjectLearning.ZenjectFactorySceneScripts.Factory
     public interface IBulletFactory : IFactory<IBullet>
     {
     }
+
 }

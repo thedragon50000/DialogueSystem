@@ -9,11 +9,18 @@ namespace _ZenjectLearning.ZenjectFactorySceneScripts
         [Inject]
         public void Construct(Player_sc player)
         {
+            print("Construct");
             transform.position = player.gameObject.transform.position;
+            
         }
         public class Factory : PlaceholderFactory<SteelBullet_sc>
         {
             
+        }
+
+        public class Pool : MemoryPool<SteelBullet_sc>
+        {
+
         }
     }
 }

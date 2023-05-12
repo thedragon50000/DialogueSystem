@@ -1,23 +1,18 @@
 ﻿using System;
+using _ZenjectLearning.ZenjectFactorySceneScripts.Factory;
 using UnityEngine;
 using UniRx;
 using DG.Tweening;
+using Zenject;
 
 namespace _ZenjectLearning.ZenjectFactorySceneScripts.Interface
 {
     public class BulletBase : MonoBehaviour
     {
-        public Transform transform;
-
-        public void Awake()
-        {
-            transform = GetComponent<Transform>();
-        }
-
         public void Start()
         {
             float positionY = transform.position.y;
-            transform.DOLocalMoveY(positionY + 10, 3).OnComplete(() => { });
+            transform.DOLocalMoveY(positionY + 9, 3).OnComplete(() => { Destroy(gameObject); });
         }
     }
 }
